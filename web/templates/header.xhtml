@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: SPARKI
+  Date: 17/02/2018
+  Time: 11:22 AM
+-->
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <h:form>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand"><h:graphicImage library="image" name="gym.png" /> </a>
+                </div>
+                <ul class="nav navbar-nav  navbar-left">
+                    <li><h:outputLink value="index.xhtml">Inicio</h:outputLink></li>
+                    <li><h:outputLink value="porque.xhtml">Porque MatchTrainer</h:outputLink></li>
+                    <li><h:outputLink value="buscador.xhtml">Buscar Entrenador</h:outputLink></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><h:outputLink value="registrar.xhtml" styleClass="glyphicon glyphicon-user"> Registrar</h:outputLink></li>
+                    <li><h:outputLink value="registrar.xhtml" styleClass="glyphicon glyphicon-log-in"> Ingresar</h:outputLink></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </h:form>
+</ui:composition>
