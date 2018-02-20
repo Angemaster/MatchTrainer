@@ -171,3 +171,58 @@ body {
 
 
 
+/* Creacion del sidebar */
+
+.sidebar-nav {
+    padding: 10px;
+}
+.nav.nav-list a {
+    padding: 5px 10px;
+}
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.nav-header {
+    color: darkgrey;
+    font-weight: bold;
+}
+
+
+/* Creacion del efecto de calificar con estrellas*/
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: grey;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+    color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+    color: orange;
+}

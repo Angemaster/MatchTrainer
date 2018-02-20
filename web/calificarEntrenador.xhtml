@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: SPARKI
+  Date: 20/02/2018
+  Time: 12:11 AM
+-->
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f = "http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="dashboard.xhtml"
+                xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <ui:define name="content">
+        <h:form styleClass="form-horizontal" role="form">
+            <div class="col-md-12">
+                <div class="col-md-6 col-md-offset-2">
+                    <div class="form-group">
+                        <h:outputText  value="Calificacion al Entrenador"/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputText for="comentario" value="Comentar sobre la Calificacion "/>
+                    </div>
+                </div>
+                <div  class="col-md-4">
+                    <p class="clasificacion radio-inline">
+                        <input id="radio1" name="estrellas" value="5" type="radio"/><label for="radio1" class="glyphicon glyphicon-star"/>
+                        <input id="radio2" name="estrellas" value="4" type="radio"/><label for="radio2" class="glyphicon glyphicon-star"/>
+                        <input id="radio3" name="estrellas" value="3" type="radio"/><label for="radio3" class="glyphicon glyphicon-star"/>
+                        <input id="radio4" name="estrellas" value="2" type="radio"/><label for="radio4" class="glyphicon glyphicon-star"/>
+                        <input id="radio5" name="estrellas" value="1" type="radio"/><label for="radio5" class="glyphicon glyphicon-star"/>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <h:inputTextarea id="comentario" styleClass="form-control" rows="5" pt:placeholder="Escribir comentario"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-offset-5">
+                    <div class="form-group">
+                        <h:commandButton value="Guardar" styleClass="btn btn-primary btn-lg" />
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
