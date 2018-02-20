@@ -8,33 +8,137 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f = "http://java.sun.com/jsf/core"
                 xmlns:h="http://java.sun.com/jsf/html"
                 template="./templates/base.xhtml">
     <ui:define name="content-area">
-        <h:form>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-md-2">
-                        <h:graphicImage library="image" name="gym.png" />
-                    </div>
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="form-group">
-                                <div class="col-md-4 col-md-offset-2">
-                                    <h:outputLabel for="nombres" value="Nombres"/>
+        <h:form styleClass="form-horizontal" role="form">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <h:graphicImage library="image" name="gym.png" />
                                 </div>
+                                <div class="form-group">
+                                    <h:commandButton value="Continuar" styleClass="btn btn-primary" />
+                                </div>
+                            </div>
+                            <div class="col-md-9">
                                 <div class="col-md-3">
-                                    <h:outputText id="nombres" value="Alexa"/>
+                                    <div class="form-group">
+                                        <h:outputText value="Nombres"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="Apellidos"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="Tiempo"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="Distrito"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="Suscripciones"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="Precio"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-md-offset-3">
+                                    <div class="form-group">
+                                        <h:outputText id="nombres" value="Alexa"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText id="apellidos" value="Bliss"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText id="tiempo" value="Bliss"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText id="distrito" value="Bliss"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText id="suscripciones" value="Bliss"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText id="precio" value="Bliss"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="form-group">
-                                <div class="col-md-4 col-md-offset-2">
-                                    <h:outputLabel for="apellidos" value="Apellidos"/>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><h:outputText value="Calificaciones como Personal Trainer"/></div>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th><h:outputText value="N° Estrellas"/></th>
+                                            <th><h:outputText value="Cantidad"/></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                            </td>
+                                            <td><h:outputText value="1"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                            </td>
+                                            <td><h:outputText value="5"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                            </td>
+                                            <td><h:outputText value="20"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star-empty"/>
+                                            </td>
+                                            <td><h:outputText value="100"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                                <i class="glyphicon glyphicon-star"/>
+                                            </td>
+                                            <td><h:outputText value="500"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="col-md-3">
-                                    <h:outputText id="apellidos" value="Bliss"/>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        cometarios
+                                    </div>
                                 </div>
                             </div>
                         </div>
