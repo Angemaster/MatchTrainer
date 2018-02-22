@@ -17,6 +17,19 @@ public class Customer {
     public Customer() {
     }
 
+    public Customer(int id, User user, District district, String firstName, String lastName, String photoName, String photoUrl, String gender, int age, Date registrationDate) {
+        this.id = id;
+        this.user = user;
+        this.district = district;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.photoName = photoName;
+        this.photoUrl = photoUrl;
+        this.gender = gender;
+        this.age = age;
+        this.registrationDate = registrationDate;
+    }
+
     public int getId() {
         return id;
     }

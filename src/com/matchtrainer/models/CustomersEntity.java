@@ -2,18 +2,26 @@ package com.matchtrainer.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class CustomersEntity extends BaseEntity {
     private static String DEFAULT_SQL = "SELECT * FROM matchtrainer.customer";
 
 
-    public Customer create(String name) {
+    public Customer create(String firstName, String lastName,String gender, int age) {
             if(getConnection() != null) {
                 try {
-                    String query = "INSERT INTO regions(region_id, region_name) VALUES( '"+  +"')";
-                    getConnection().createStatement().executeLargeUpdate(query);
+                    java.util.Date date = new Date();
+                    java.sql.Date fechaActual = new java.sql.Date(date.getTime());
+
+
+                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ 1 +"' , '"+ firstName +"','"+ lastName +"','"+ gender +"','"+ age +"','"+ fechaActual+"')";
+                    getConnection().createStatement().execute(query);
                 }catch (SQLException e){
                     e.printStackTrace();
                 }

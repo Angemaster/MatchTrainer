@@ -20,47 +20,53 @@
                         <h1 class="text-center"> <h:outputText value="Crear Cuenta"/></h1>
                         <div class="col-md-12">
                             <div class="col-md-5">
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <h:inputText styleClass="form-control" pt:placeholder="Correo"/>
-                                </div>
+                                </div> -->
+
                                 <div class="form-group">
-                                    <h:inputText styleClass="form-control" pt:placeholder="Nombres"/>
+                                    <h:inputText value="#{customersBean.firstName}" styleClass="form-control" pt:placeholder="Nombres"/>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <h:outputLabel for="tipoCuenta" value="Tipo de Cuenta"/>
                                     <h:selectOneRadio id="tipoCuenta" value="" >
                                         <f:selectItem  itemValue="Visitante" itemLabel="Visitante" />
                                         <f:selectItem itemValue="Entrenador Personal" itemLabel="Entrenador Personal" />
                                     </h:selectOneRadio>
-                                </div>
+                                </div> -->
+
                                 <div class="form-group">
-                                    <h:inputText styleClass="form-control" pt:placeholder="Edad"/>
+                                    <h:inputText value="#{customersBean.age}" styleClass="form-control" pt:placeholder="Edad"/>
                                 </div>
                             </div>
+
                             <div class="col-md-5 col-md-offset-2">
+                                <!-- <div class="form-group">
+                                    <h:inputText  styleClass="form-control" pt:placeholder="Contraseña"/>
+                                </div> -->
+
                                 <div class="form-group">
-                                    <h:inputText styleClass="form-control" pt:placeholder="Contraseña"/>
+                                    <h:inputText value="#{customersBean.lastName}"  styleClass="form-control" pt:placeholder="Apellidos"/>
                                 </div>
-                                <div class="form-group">
-                                    <h:inputText  styleClass="form-control" pt:placeholder="Apellidos"/>
-                                </div>
+
                                 <div class="form-group">
                                     <h:outputLabel for="genero" value="Genero"/>
-                                    <h:selectOneRadio id="genero" value="" >
+                                    <h:selectOneRadio id="genero" value="#{customersBean.gender}" >
                                         <f:selectItem itemValue="Hombre" itemLabel="Hombre" />
                                         <f:selectItem itemValue="Mujer" itemLabel="Mujer" />
                                     </h:selectOneRadio>
                                 </div>
                                 <div class="form-group">
-                                    <h:selectOneMenu value="" styleClass="form-control">
-                                        <f:selectItem itemValue="-1" itemLabel="Elegir Distrito" />
+                                    <h:selectOneMenu value="#{districtsBean.districts}" var="district" styleClass="form-control">
+                                        <f:selectItem itemValue="#{district.id}" itemLabel="#{district.name}" />
                                     </h:selectOneMenu>
                                 </div>
+
                             </div>
                         </div>
                         <div class="col-md-7 col-md-offset-5">
                             <div class="form-group">
-                                <h:commandButton value="Crear Cuenta" styleClass="btn btn-primary btn-lg" />
+                                <h:commandButton action="#{customersBean.createCustomer}" value="Crear Cuenta" styleClass="btn btn-primary btn-lg" />
                             </div>
                         </div>
                     </div>
