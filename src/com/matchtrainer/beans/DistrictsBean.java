@@ -22,6 +22,14 @@ public class DistrictsBean implements Serializable {
         return service.findAllDistricts();
     }
 
+    public int getId(){
+        return this.getDistrict().getId();
+    }
+
+    public void setName(String name){
+        this.getDistrict().setName(name);
+    }
+
     public District getDistrict() {
         return district;
     }
