@@ -13,14 +13,13 @@ public class CustomersEntity extends BaseEntity {
     private static String DEFAULT_SQL = "SELECT * FROM matchtrainer.customer";
 
 
-    public Customer create(String firstName, String lastName,String gender, int age) {
+    public Customer create(int distritoId,String firstName, String lastName,String gender, int age) {
             if(getConnection() != null) {
                 try {
                     java.util.Date date = new Date();
                     java.sql.Date fechaActual = new java.sql.Date(date.getTime());
 
-
-                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ 1 +"' , '"+ firstName +"','"+ lastName +"','"+ gender +"','"+ age +"','"+ fechaActual+"')";
+                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ distritoId +"' , '"+ firstName +"','"+ lastName +"','"+ gender +"','"+ age +"','"+ fechaActual+"')";
                     getConnection().createStatement().execute(query);
                 }catch (SQLException e){
                     e.printStackTrace();

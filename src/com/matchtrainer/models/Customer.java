@@ -46,12 +46,14 @@ public class Customer {
         this.user = user;
     }
 
+
+
     public District getDistrict() {
         return district;
     }
 
     public void setDistrict(District district) {
-        this.district = district;
+        this.district=district;
     }
 
     public String getFirstName() {

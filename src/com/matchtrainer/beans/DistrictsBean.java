@@ -34,7 +34,7 @@ public class DistrictsBean implements Serializable {
         return district;
     }
 
-    public void setRegion(District district) {
+    public void setDistrict(District district) {
         this.district = district;
     }
 

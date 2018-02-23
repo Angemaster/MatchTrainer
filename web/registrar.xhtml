@@ -56,10 +56,14 @@
                                         <f:selectItem itemValue="Mujer" itemLabel="Mujer" />
                                     </h:selectOneRadio>
                                 </div>
+
                                 <div class="form-group">
-                                    <h:selectOneMenu  styleClass="form-control">
-                                        <f:selectItem value="#{districtsBean.districts}" var="district" itemValue="#{district.id}" itemLabel="#{district.name}" />
+                                    <h:selectOneMenu id="sparki" value="#{customersBean.district}" styleClass="form-control">
+                                        <f:selectItems value="#{districtsBean.districts}" var="distrito"  itemLabel="#{distrito.name}" itemValue="#{distrito.id}" />
+                                        <f:ajax execute="sparki" render="aqui"/>
                                     </h:selectOneMenu>
+                                    <h:outputText id="aqui" value="#{customersBean.district}"/>
+
                                 </div>
 
                             </div>

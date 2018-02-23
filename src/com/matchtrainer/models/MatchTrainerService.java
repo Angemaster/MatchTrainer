@@ -67,9 +67,9 @@ public class MatchTrainerService {
                 getCustomersEntity().findByName(name) : null;
     }
 */
-    public Customer createCustomer(String firstName, String lastName,String gender,int age) {
+    public Customer createCustomer(int distritoId,String firstName, String lastName,String gender,int age) {
         return getCustomersEntity() != null ?
-                getCustomersEntity().create(firstName,lastName,gender,age) : null;
+                getCustomersEntity().create(distritoId,firstName,lastName,gender,age) : null;
     }
 /*
     public boolean deleteCustomer(int id) {

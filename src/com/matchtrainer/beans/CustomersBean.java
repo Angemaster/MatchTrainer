@@ -1,6 +1,7 @@
 package com.matchtrainer.beans;
 
 import com.matchtrainer.models.Customer;
+import com.matchtrainer.models.District;
 import com.matchtrainer.models.MatchTrainerService;
 
 import javax.enterprise.context.SessionScoped;
@@ -14,7 +15,6 @@ import java.util.List;
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
-
     public CustomersBean(){
         service = new MatchTrainerService();
     }
@@ -24,7 +24,14 @@ public class CustomersBean implements Serializable{
     }
     */
 
+    public District getDistrict(){
+        return this.getCustomer().getDistrict();
+    }
 
+    //el problema es que recupero un numero y nose como guardar en la entidad district
+    public void setDistrict(District district){
+        this.getCustomer().setDistrict(district);
+    }
 
     public String getFirstName(){
         return this.getCustomer().getFirstName();
@@ -86,11 +93,12 @@ public class CustomersBean implements Serializable{
         this.setCustomer(new Customer());
         return "success";
     }
-
-    public String createCustomer(){
-        service.createCustomer(this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
+    /*
+    *public String createCustomer(){
+        service.createCustomer(this.getCustomer().getAge(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
         return "success";
-    }
+    }*/
+
 
     public Customer getCustomer() {
         return customer;
