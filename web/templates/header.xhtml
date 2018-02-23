@@ -16,13 +16,13 @@
                     <a class="navbar-brand"><h:graphicImage library="image" name="gym.png" /> </a>
                 </div>
                 <ul class="nav navbar-nav  navbar-left">
-                    <li><h:outputLink value="index.xhtml">Inicio</h:outputLink></li>
-                    <li><h:outputLink value="porque.xhtml">Porque MatchTrainer</h:outputLink></li>
-                    <li><h:outputLink value="buscador.xhtml">Buscar Entrenador</h:outputLink></li>
+                    <li><h:commandLink value=" Inicio" action="#{customersBean.newCustomer}"/></li>
+                    <li><h:commandLink value=" Porque MatchTrainer" action="#{customersBean.newCustomer}"/></li>
+                    <li><h:commandLink value=" Buscar Entrenador" action="#{customersBean.newCustomer}"/></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><h:commandLink value=" Registrar" action="#{customersBean.newCustomer}"  styleClass="glyphicon glyphicon-user"/></li>
-                    <li><h:outputLink value="registrar.xhtml" styleClass="glyphicon glyphicon-log-in"> Ingresar</h:outputLink></li>
+                    <li><h:commandLink value=" Iniciar" action="#{customersBean.newCustomer}"  styleClass="glyphicon glyphicon-log-in"/></li>
                 </ul>
             </div>
         </div>
