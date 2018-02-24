@@ -19,7 +19,7 @@ public class CustomersEntity extends BaseEntity {
                     java.util.Date date = new Date();
                     java.sql.Date fechaActual = new java.sql.Date(date.getTime());
 
-                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ customer.getDistrictId() +"' , '"+ customer.getFirstName()+"','"+ customer.getLastName() +"','"+ customer.getGender() +"','"+ customer.getAge() +"','"+ fechaActual+"')";
+                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ customer.getUserId() +"','"+ customer.getDistrictId() +"' , '"+ customer.getFirstName()+"','"+ customer.getLastName() +"','"+ customer.getGender() +"','"+ customer.getAge() +"','"+ fechaActual+"')";
                     getConnection().createStatement().execute(query);
                 }catch (SQLException e){
                     e.printStackTrace();
@@ -27,6 +27,8 @@ public class CustomersEntity extends BaseEntity {
             }
         return null;
     }
+
+
 /*
     private List<Customer> findByCriteria(String sql) {
         List<Customer> customers;

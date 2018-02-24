@@ -76,6 +76,11 @@ public class MatchTrainerService {
                 getCustomersEntity().findByName(name) : null;
     }
 */
+public User createUser(User user) {
+    return getUsersEntity() != null ?
+            getUsersEntity().create(user) : null;
+}
+
     public Customer createCustomer(Customer customer) {
         return getCustomersEntity() != null ?
                 getCustomersEntity().create(customer) : null;

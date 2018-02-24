@@ -70,6 +70,10 @@ public class UsersBean implements Serializable {
         return "success";
     }
 
+    public User createUser(){
+        return service.createUser(this.getUser());
+    }
+
     public String doValidateUser(){
         if (service.findUserEmailPassword(this.getEmail(),this.getPassword()) == null)
         return "error";
