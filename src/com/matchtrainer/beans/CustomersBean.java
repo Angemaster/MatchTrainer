@@ -15,6 +15,7 @@ import java.util.List;
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
+
     public CustomersBean(){
         service = new MatchTrainerService();
     }
@@ -97,7 +98,6 @@ public class CustomersBean implements Serializable{
         service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
         return "success";
     }
-
 
     public Customer getCustomer() {
         return customer;

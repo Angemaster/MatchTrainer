@@ -6,13 +6,13 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 public class MatchTrainerService {
     private Connection connection;
     private CustomersEntity customersEntity;
     private DistrictsEntity districtsEntity;
+    private UsersEntity usersEntity;
 
     private Connection getConnection() {
         if (connection == null)  {
@@ -51,6 +51,15 @@ public class MatchTrainerService {
         return districtsEntity;
     }
 
+    protected UsersEntity getUsersEntity() {
+        if(getConnection() != null) {
+            if(usersEntity == null) {
+                usersEntity = new UsersEntity();
+                usersEntity.setConnection(getConnection());
+            }
+        }
+        return usersEntity;
+    }
 /*
     public List<Customer> findAllCustomers() {
         return getCustomersEntity() != null ?
@@ -86,5 +95,10 @@ public class MatchTrainerService {
     public List<District> findAllDistricts() {
         return getDistrictsEntity() != null ?
                 getDistrictsEntity().findAll() : null;
+    }
+
+    public User findUserEmailPassword(User user) {
+        return getUsersEntity() != null ?
+                getUsersEntity().findByEmailPassword(user) : null;
     }
 }
