@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Customer {
     private int id;
-    private User user;
+    private int userId;
     private int districtId;
     private String firstName;
     private String lastName;
@@ -17,9 +17,9 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, User user, int districtId, String firstName, String lastName, String photoName, String photoUrl, String gender, int age, Date registrationDate) {
+    public Customer(int id, int userId, int districtId, String firstName, String lastName, String photoName, String photoUrl, String gender, int age, Date registrationDate) {
         this.id = id;
-        this.user = user;
+        this.userId = userId;
         this.districtId = districtId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -38,12 +38,12 @@ public class Customer {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getDistrictId() {

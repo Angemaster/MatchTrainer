@@ -21,19 +21,19 @@
                         <div class="col-md-12">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <h:inputText  styleClass="form-control" pt:placeholder="Correo"/>
+                                    <h:inputText value="#{usersBean.email}"  styleClass="form-control" pt:placeholder="Correo"/>
                                 </div>
 
                                 <div class="form-group">
                                     <h:inputText value="#{customersBean.firstName}" styleClass="form-control" pt:placeholder="Nombres"/>
                                 </div>
-                                <!-- <div class="form-group">
+                                <div class="form-group">
                                     <h:outputLabel for="tipoCuenta" value="Tipo de Cuenta"/>
-                                    <h:selectOneRadio id="tipoCuenta" value="" >
-                                        <f:selectItem  itemValue="Visitante" itemLabel="Visitante" />
-                                        <f:selectItem itemValue="Entrenador Personal" itemLabel="Entrenador Personal" />
+                                    <h:selectOneRadio id="tipoCuenta" value="#{usersBean.profileId}" >
+                                        <f:selectItem  itemValue="2" itemLabel="Visitante" />
+                                        <f:selectItem itemValue="3" itemLabel="Entrenador Personal" />
                                     </h:selectOneRadio>
-                                </div> -->
+                                </div>
 
                                 <div class="form-group">
                                     <h:inputText value="#{customersBean.age}" styleClass="form-control" />
@@ -42,7 +42,7 @@
 
                             <div class="col-md-5 col-md-offset-2">
                                 <div class="form-group">
-                                    <h:inputSecret  styleClass="form-control" pt:placeholder="Contraseña"/>
+                                    <h:inputSecret   styleClass="form-control" pt:placeholder="Contraseña"/>
                                 </div>
 
                                 <div class="form-group">

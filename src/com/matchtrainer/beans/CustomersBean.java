@@ -3,19 +3,20 @@ package com.matchtrainer.beans;
 import com.matchtrainer.models.Customer;
 import com.matchtrainer.models.District;
 import com.matchtrainer.models.MatchTrainerService;
+import com.matchtrainer.models.User;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 @Named
 @SessionScoped
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
-
+    private  UsersBean usersBean;
     public CustomersBean(){
         service = new MatchTrainerService();
     }
@@ -30,6 +31,14 @@ public class CustomersBean implements Serializable{
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public int getUserId(){
+        return this.getCustomer().getUserId();
+    }
+
+    public void setUserId(int userId){
+        this.getCustomer().setUserId(userId);
     }
 
     public int getDistrictId(){
@@ -102,9 +111,19 @@ public class CustomersBean implements Serializable{
     }
 
     public String createCustomer(){
+        usersBean = new UsersBean();
+        User user =usersBean.createUser();
+        if (user!= null ) {
+            this.getCustomer().setUserId(user.getId());
+            service.createCustomer(this.getCustomer());
+            return "success";
+        }else{
+            return  "error";
+        }
+
         /*service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());*/
-        service.createCustomer(this.getCustomer());
-        return "success";
+
+
     }
 
 
