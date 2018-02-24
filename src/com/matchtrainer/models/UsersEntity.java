@@ -32,9 +32,9 @@ public class UsersEntity extends BaseEntity {
         return null;
     }
 
-    public User findByEmailPassword(User user) {
+    public User findByEmailPassword(String email,String password) {
         List<User> users = findByCriteria(DEFAULT_SQL +
-                "WHERE email='" + user.getEmail() + "' AND password= '" + user.getPassword() + "'");
+                "WHERE email='" + email + "' AND password= '" + password + "'");
         return (users != null ? users.get(0) : null);
     }
 }

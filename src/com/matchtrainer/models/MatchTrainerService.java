@@ -76,9 +76,9 @@ public class MatchTrainerService {
                 getCustomersEntity().findByName(name) : null;
     }
 */
-    public Customer createCustomer(int distritoId,String firstName, String lastName,String gender,int age) {
+    public Customer createCustomer(Customer customer) {
         return getCustomersEntity() != null ?
-                getCustomersEntity().create(distritoId,firstName,lastName,gender,age) : null;
+                getCustomersEntity().create(customer) : null;
     }
 /*
     public boolean deleteCustomer(int id) {
@@ -97,8 +97,8 @@ public class MatchTrainerService {
                 getDistrictsEntity().findAll() : null;
     }
 
-    public User findUserEmailPassword(User user) {
+    public User findUserEmailPassword(String email,String password) {
         return getUsersEntity() != null ?
-                getUsersEntity().findByEmailPassword(user) : null;
+                getUsersEntity().findByEmailPassword(email,password) : null;
     }
 }

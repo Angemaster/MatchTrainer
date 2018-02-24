@@ -19,11 +19,18 @@ public class CustomersBean implements Serializable{
     public CustomersBean(){
         service = new MatchTrainerService();
     }
-    /*
-    public List<Customer> getRegions(){
+/*
+*  public List<Customer> getCustomersByTrainer(){
         return service.findAllCustomers();
+    }*/
+
+    public Customer getCustomer() {
+        return customer;
     }
-    */
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
     public int getDistrictId(){
         return this.getCustomer().getDistrictId();
@@ -95,17 +102,12 @@ public class CustomersBean implements Serializable{
     }
 
     public String createCustomer(){
-        service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
+        /*service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());*/
+        service.createCustomer(this.getCustomer());
         return "success";
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
     /*
     public String editCustomer(Customer region){
         this.setCustomer(region);

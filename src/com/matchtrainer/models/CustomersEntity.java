@@ -13,13 +13,13 @@ public class CustomersEntity extends BaseEntity {
     private static String DEFAULT_SQL = "SELECT * FROM matchtrainer.customer";
 
 
-    public Customer create(int distritoId,String firstName, String lastName,String gender, int age) {
+    public Customer create(Customer customer) {
             if(getConnection() != null) {
                 try {
                     java.util.Date date = new Date();
                     java.sql.Date fechaActual = new java.sql.Date(date.getTime());
 
-                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ distritoId +"' , '"+ firstName +"','"+ lastName +"','"+ gender +"','"+ age +"','"+ fechaActual+"')";
+                    String query = "INSERT INTO customer(user_id,district_id,firstname,lastname,gender,age,registrationdate) VALUES('"+ 1 +"','"+ customer.getDistrictId() +"' , '"+ customer.getFirstName()+"','"+ customer.getLastName() +"','"+ customer.getGender() +"','"+ customer.getAge() +"','"+ fechaActual+"')";
                     getConnection().createStatement().execute(query);
                 }catch (SQLException e){
                     e.printStackTrace();
@@ -27,22 +27,22 @@ public class CustomersEntity extends BaseEntity {
             }
         return null;
     }
-    /*
-    private List<Region> findByCriteria(String sql) {
-        List<Region> regions;
+/*
+    private List<Customer> findByCriteria(String sql) {
+        List<Customer> customers;
         if(getConnection() != null) {
-            regions = new ArrayList<>();
+            customers = new ArrayList<>();
             try {
                 ResultSet resultSet = getConnection()
                         .createStatement()
                         .executeQuery(sql);
                 while (resultSet.next()) {
-                    Region region = new Region()
+                    Customer customer = new Customer()
                             .setId(resultSet.getInt("region_id"))
                             .setName(resultSet.getString("region_name"));
-                    regions.add(region);
+                    customers.add(customer);
                 }
-                return regions;
+                return customers;
 
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -51,9 +51,13 @@ public class CustomersEntity extends BaseEntity {
         return null;
     }
 
-    public List<Region> findAll() {
+    public List<Customer> findByProfileId() {
+        //String query;
         return findByCriteria(DEFAULT_SQL);
     }
+
+    /*
+
 
     public Region findById(int id) {
         List<Region> regions = findByCriteria(DEFAULT_SQL +

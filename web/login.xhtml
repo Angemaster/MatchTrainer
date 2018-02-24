@@ -17,13 +17,10 @@
             <div class="modal-dialog">
                 <div class="loginmodal-container">
                     <h1><h:outputText value="Login to Your Account"/></h1>
-                            <h:inputText pt:placeholder="Username"/>
-                            <h:inputSecret pt:placeholder="Password"/>
-                            <h:commandButton value="Login" styleClass="login loginmodal-submit"/>
+                            <h:inputText value="#{usersBean.email}" pt:placeholder="Correo"/>
+                            <h:inputSecret value="#{usersBean.password}" pt:placeholder="Contraseña"/>
+                            <h:commandButton value="Login" action="#{usersBean.doValidateUser}" styleClass="login loginmodal-submit"/>
                     <div class="login-help">
-                        <div class="col-md-6">
-                            <h:commandLink value="Registrar" action="#{customersBean.newCustomer}" />
-                        </div>
                         <div class="nav col-md-6">
                             <h:commandLink value="Olvidastes la contraseña" action="#" />
                         </div>

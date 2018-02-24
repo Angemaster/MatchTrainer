@@ -71,10 +71,11 @@ public class UsersBean implements Serializable {
     }
 
     public String doValidateUser(){
-        service.findUserEmailPassword(this.user);
-        if (user != null)
-        return "success";
-        else
+        if (service.findUserEmailPassword(this.getEmail(),this.getPassword()) == null)
         return "error";
+        else
+        return "success";
     }
+
+
 }
