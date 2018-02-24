@@ -14,7 +14,7 @@
                 xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
     <ui:define name="content-area">
         <h:form styleClass="form-horizontal" role="form">
-            <div class="col-md-12">
+            <div class="col-md-15">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="col-md-3">
@@ -62,8 +62,18 @@
                         </div>
                         <div class="col-md-9">
                             <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><h:outputText value="Buscador de entrenador"/></h3>
+                                </div>
                                 <div class="panel-body">
-                                    Panel content
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <h:inputText styleClass="form-control" pt:placeholder="Buscar por Nombres y Apellidos"/>
+                                            <span class="input-group-btn">
+                                    <h:commandButton styleClass="btn btn-default" value="Go"/>
+                                </span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel-footer">Panel footer</div>
                             </div>
