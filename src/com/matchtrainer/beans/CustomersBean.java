@@ -24,13 +24,12 @@ public class CustomersBean implements Serializable{
     }
     */
 
-    public District getDistrict(){
-        return this.getCustomer().getDistrict();
+    public int getDistrictId(){
+        return this.getCustomer().getDistrictId();
     }
 
-    //el problema es que recupero un numero y nose como guardar en la entidad district
-    public void setDistrict(District district){
-        this.getCustomer().setDistrict(district);
+    public void setDistrictId(int districtId){
+        this.getCustomer().setDistrictId(districtId);
     }
 
     public String getFirstName(){
@@ -93,11 +92,11 @@ public class CustomersBean implements Serializable{
         this.setCustomer(new Customer());
         return "success";
     }
-    /*
-    *public String createCustomer(){
-        service.createCustomer(this.getCustomer().getAge(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
+
+    public String createCustomer(){
+        service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());
         return "success";
-    }*/
+    }
 
 
     public Customer getCustomer() {

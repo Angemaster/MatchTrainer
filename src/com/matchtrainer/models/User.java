@@ -2,12 +2,20 @@ package com.matchtrainer.models;
 
 public class User {
     private int id;
-    private Profile profile;
+    private int profileId;
     private String email;
     private String password;
     private boolean enabled;
 
     public User() {
+    }
+
+    public User(int id, int profileId, String email, String password, boolean enabled) {
+        this.id = id;
+        this.profileId = profileId;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
     }
 
     public int getId() {
@@ -18,12 +26,12 @@ public class User {
         this.id = id;
     }
 
-    public Profile getProfile() {
-        return profile;
+    public int getProfileId() {
+        return profileId;
     }
 
-    public void setProfile(Profile profile) {
-        this.profile = profile;
+    public void setProfileId(int profileId) {
+        this.profileId = profileId;
     }
 
     public String getEmail() {

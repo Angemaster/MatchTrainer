@@ -20,9 +20,9 @@
                         <h1 class="text-center"> <h:outputText value="Crear Cuenta"/></h1>
                         <div class="col-md-12">
                             <div class="col-md-5">
-                                <!-- <div class="form-group">
-                                    <h:inputText styleClass="form-control" pt:placeholder="Correo"/>
-                                </div> -->
+                                <div class="form-group">
+                                    <h:inputText  styleClass="form-control" pt:placeholder="Correo"/>
+                                </div>
 
                                 <div class="form-group">
                                     <h:inputText value="#{customersBean.firstName}" styleClass="form-control" pt:placeholder="Nombres"/>
@@ -36,14 +36,14 @@
                                 </div> -->
 
                                 <div class="form-group">
-                                    <h:inputText value="#{customersBean.age}" styleClass="form-control" pt:placeholder="Edad"/>
+                                    <h:inputText value="#{customersBean.age}" styleClass="form-control" />
                                 </div>
                             </div>
 
                             <div class="col-md-5 col-md-offset-2">
-                                <!-- <div class="form-group">
-                                    <h:inputText  styleClass="form-control" pt:placeholder="Contraseña"/>
-                                </div> -->
+                                <div class="form-group">
+                                    <h:inputSecret  styleClass="form-control" pt:placeholder="Contraseña"/>
+                                </div>
 
                                 <div class="form-group">
                                     <h:inputText value="#{customersBean.lastName}"  styleClass="form-control" pt:placeholder="Apellidos"/>
@@ -58,12 +58,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <h:selectOneMenu id="sparki" value="#{customersBean.district}" styleClass="form-control">
+                                    <h:selectOneMenu value="#{customersBean.districtId}"  styleClass="form-control">
+                                        <f:selectItem itemLabel="--Seleccione--" itemValue="-1"/>
                                         <f:selectItems value="#{districtsBean.districts}" var="distrito"  itemLabel="#{distrito.name}" itemValue="#{distrito.id}" />
-                                        <f:ajax execute="sparki" render="aqui"/>
                                     </h:selectOneMenu>
-                                    <h:outputText id="aqui" value="#{customersBean.district}"/>
-
                                 </div>
 
                             </div>

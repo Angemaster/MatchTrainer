@@ -5,7 +5,7 @@ import java.util.Date;
 public class Customer {
     private int id;
     private User user;
-    private District district;
+    private int districtId;
     private String firstName;
     private String lastName;
     private String photoName;
@@ -17,10 +17,10 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, User user, District district, String firstName, String lastName, String photoName, String photoUrl, String gender, int age, Date registrationDate) {
+    public Customer(int id, User user, int districtId, String firstName, String lastName, String photoName, String photoUrl, String gender, int age, Date registrationDate) {
         this.id = id;
         this.user = user;
-        this.district = district;
+        this.districtId = districtId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.photoName = photoName;
@@ -46,14 +46,12 @@ public class Customer {
         this.user = user;
     }
 
-
-
-    public District getDistrict() {
-        return district;
+    public int getDistrictId() {
+        return districtId;
     }
 
-    public void setDistrict(District district) {
-        this.district=district;
+    public void setDistrictId(int districtId) {
+        this.districtId=districtId;
     }
 
     public String getFirstName() {
