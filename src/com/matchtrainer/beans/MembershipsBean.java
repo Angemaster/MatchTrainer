@@ -3,9 +3,14 @@ package com.matchtrainer.beans;
 import com.matchtrainer.models.MatchTrainerService;
 import com.matchtrainer.models.Membership;
 
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+import java.io.Serializable;
 import java.util.Date;
 
-public class MembershipsBean {
+@Named
+@SessionScoped
+public class MembershipsBean implements Serializable {
     private MatchTrainerService service;
     private Membership membership;
 
