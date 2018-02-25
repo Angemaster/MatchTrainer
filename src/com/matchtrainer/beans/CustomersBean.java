@@ -121,8 +121,6 @@ public class CustomersBean implements Serializable{
             return  "error";
         }
 
-        /*service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());*/
-
 
     }
 
