@@ -24,8 +24,41 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer3}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/politica.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer4}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
 
     <navigation-rule>
