@@ -17,8 +17,8 @@
             <div class="modal-dialog">
                 <div class="loginmodal-container">
                     <h1><h:outputText value="Login to Your Account"/></h1>
-                            <h:inputText value="#{usersBean.email}" pt:placeholder="Correo"/>
-                            <h:inputSecret value="#{usersBean.password}" pt:placeholder="Contraseña"/>
+                            <h:inputText id="correoLogin" value="#{usersBean.email}" pt:placeholder="Correo"/>
+                            <h:inputSecret id="contraseñaLogin" value="#{usersBean.password}" pt:placeholder="Contraseña"/>
                             <h:commandButton value="Login" action="#{usersBean.doValidateUser}" styleClass="login loginmodal-submit"/>
                     <div class="login-help">
                         <div class="nav col-md-6">

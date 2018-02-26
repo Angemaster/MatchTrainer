@@ -43,25 +43,21 @@ public class UsersEntity extends BaseEntity {
     public User create(User user) {
         if(getConnection() != null) {
             try {
-                String query = "INSERT INTO user(profile_id,email,password) VALUES('"+ user.getProfileId() +"','"+ user.getEmail() +"' , '"+ user.getPassword()+"')";
-                PreparedStatement statement =getConnection().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-                int affectRows = statement.executeUpdate();
-                if (affectRows == 0){
-                    throw new SQLException("No se pudo guardar");
-                }
 
-                ResultSet generatedKeys = statement.getGeneratedKeys();
-                if (generatedKeys.next()){
-                    int profileId = generatedKeys.getInt("id");
-                    user.setId(profileId);
+                String query = "INSERT INTO user(profile_id,email,password) VALUES('"+ user.getProfileId() +"','"+ user.getEmail() +"' , '"+ user.getPassword()+"')";
+                Statement statement = getConnection().createStatement();
+                statement.executeUpdate(query, Statement.RETURN_GENERATED_KEYS);
+                ResultSet rs = statement.getGeneratedKeys();
+                if (rs != null && rs.next()) {
+                    user.setId(rs.getInt(1));
                 }
+                return user;
             }catch (SQLException e){
                 e.printStackTrace();
             }
         }
         return null;
     }
-
 
     /*
 createStatement () crea un objeto Statement basado en una cadena SQL totalmente calificada sin parámetros.
