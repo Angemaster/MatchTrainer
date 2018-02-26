@@ -14,6 +14,7 @@ public class MatchTrainerService {
     private DistrictsEntity districtsEntity;
     private UsersEntity usersEntity;
     private MembershipsEntity membershipsEntity;
+    private SchedulesEntity schedulesEntity;
 
     private Connection getConnection() {
         if (connection == null)  {
@@ -71,6 +72,16 @@ public class MatchTrainerService {
         return membershipsEntity;
     }
 
+    protected SchedulesEntity getSchedulesEntity() {
+        if(getConnection() != null) {
+            if(schedulesEntity == null) {
+                schedulesEntity = new SchedulesEntity();
+               schedulesEntity.setConnection(getConnection());
+            }
+        }
+        return schedulesEntity;
+    }
+
 /*
     public List<Customer> findAllCustomers() {
         return getCustomersEntity() != null ?
@@ -113,9 +124,19 @@ public class MatchTrainerService {
     }
     */
 
+    public List<Schedule> findAllSchedules() {
+        return getSchedulesEntity() != null ?
+                getSchedulesEntity().findAll() : null;
+    }
+
+
     public List<District> findAllDistricts() {
         return getDistrictsEntity() != null ?
                 getDistrictsEntity().findAll() : null;
+    }
+    public List<Membership> findAllMemberships() {
+        return getMembershipsEntity() != null ?
+                getMembershipsEntity().findAll() : null;
     }
 
     public User findUserEmailPassword(String email,String password) {

@@ -3,8 +3,9 @@ package com.matchtrainer.models;
 import java.util.Date;
 
 public class Schedule {
+
     private int id;
-    private Customer customer;
+    private int trainer_id;
     private String weekday;
     private Date starttime;
     private Date endtime;
@@ -21,12 +22,12 @@ public class Schedule {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getTrainer_id() {
+        return trainer_id;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setTrainer_id(int trainer_id) {
+        this.trainer_id = trainer_id;
     }
 
     public String getWeekday() {
@@ -53,7 +54,7 @@ public class Schedule {
         this.endtime = endtime;
     }
 
-    public boolean isEnabled() {
+    public boolean getEnabled() {
         return enabled;
     }
 
