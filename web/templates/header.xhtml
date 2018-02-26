@@ -8,8 +8,7 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
     xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:f="http://java.sun.com/jsf/core">
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
     <h:form>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -22,7 +21,7 @@
                     <li><h:commandLink value=" Buscar Entrenador" action="#{customersBean.newCustomer}"/></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><h:commandLink value=" Registrar" action="#{customersBean.newCustomer}"  styleClass="glyphicon glyphicon-user"/></li>
+                    <li><h:commandLink value=" Registrar" action="#{usersBean.searchUser}"  styleClass="glyphicon glyphicon-user"/></li>
                     <li><h:commandLink value=" Iniciar"  action="#{usersBean.searchUser}"   styleClass="glyphicon glyphicon-log-in"/></li>
                 </ul>
             </div>
