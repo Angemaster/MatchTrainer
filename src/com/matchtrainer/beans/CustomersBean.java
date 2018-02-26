@@ -115,8 +115,13 @@ public class CustomersBean implements Serializable{
     }
 
     public String newCustomer1(){
-        this.usersBean.setUser(new User());
-        this.setCustomer(new Customer());
+        return "success";
+    }
+
+    public String newCustomer2(){
+        return "success";
+    }
+    public String newCustomer3(){
         return "success";
     }
 
