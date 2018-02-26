@@ -21,7 +21,7 @@
                         <div class="col-md-12">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <h:inputText  id="correoRegistrar"  styleClass="form-control" pt:placeholder="Correo"/>
+                                    <h:inputText value="#{usersBean.email}" id="correoRegistrar"  styleClass="form-control" pt:placeholder="Correo"/>
                                 </div>
 
                                 <div class="form-group">
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="form-group">
                                     <h:outputLabel for="tipoCuenta" value="Tipo de Cuenta"/>
-                                    <h:selectOneRadio id="tipoCuenta" >
+                                    <h:selectOneRadio id="tipoCuenta" value="#{usersBean.profileId}">
                                         <f:selectItem  itemValue="2" itemLabel="Visitante" />
                                         <f:selectItem itemValue="3" itemLabel="Entrenador Personal" />
                                     </h:selectOneRadio>
@@ -42,7 +42,7 @@
 
                             <div class="col-md-5 col-md-offset-2">
                                 <div class="form-group">
-                                    <h:inputSecret id="contraseñaRegistrar" styleClass="form-control" pt:placeholder="Contraseña"/>
+                                    <h:inputSecret value="#{usersBean.password}" id="contraseñaRegistrar" styleClass="form-control" pt:placeholder="Contraseña"/>
                                 </div>
 
                                 <div class="form-group">

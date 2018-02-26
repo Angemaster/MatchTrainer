@@ -6,6 +6,7 @@ import com.matchtrainer.models.MatchTrainerService;
 import com.matchtrainer.models.User;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Date;
@@ -16,7 +17,9 @@ import java.util.Date;
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
-    private  UsersBean usersBean;
+    @Inject
+    private UsersBean usersBean;
+
     public CustomersBean(){
         service = new MatchTrainerService();
     }
@@ -106,12 +109,12 @@ public class CustomersBean implements Serializable{
     }
 
     public String newCustomer(){
+        this.usersBean.setUser(new User());
         this.setCustomer(new Customer());
         return "success";
     }
 
     public String createCustomer(){
-        usersBean = new UsersBean();
         User user =usersBean.createUser();
         if (user!= null ) {
             this.getCustomer().setUserId(user.getId());
@@ -120,8 +123,6 @@ public class CustomersBean implements Serializable{
         }else{
             return  "error";
         }
-
-
     }
 
 
