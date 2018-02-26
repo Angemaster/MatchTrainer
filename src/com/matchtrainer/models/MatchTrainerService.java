@@ -13,6 +13,8 @@ public class MatchTrainerService {
     private CustomersEntity customersEntity;
     private DistrictsEntity districtsEntity;
     private UsersEntity usersEntity;
+    private MembershipsEntity membershipsEntity;
+    private SchedulesEntity schedulesEntity;
 
     private Connection getConnection() {
         if (connection == null)  {
@@ -60,6 +62,26 @@ public class MatchTrainerService {
         }
         return usersEntity;
     }
+    protected MembershipsEntity getMembershipsEntity() {
+        if(getConnection() != null) {
+            if(membershipsEntity == null) {
+                membershipsEntity = new MembershipsEntity();
+                membershipsEntity.setConnection(getConnection());
+            }
+        }
+        return membershipsEntity;
+    }
+
+    protected SchedulesEntity getSchedulesEntity() {
+        if(getConnection() != null) {
+            if(schedulesEntity == null) {
+                schedulesEntity = new SchedulesEntity();
+               schedulesEntity.setConnection(getConnection());
+            }
+        }
+        return schedulesEntity;
+    }
+
 /*
     public List<Customer> findAllCustomers() {
         return getCustomersEntity() != null ?
@@ -76,14 +98,19 @@ public class MatchTrainerService {
                 getCustomersEntity().findByName(name) : null;
     }
 */
-public User createUser(User user) {
-    return getUsersEntity() != null ?
+    public User createUser(User user) {
+        return getUsersEntity() != null ?
             getUsersEntity().create(user) : null;
-}
+    }
 
     public Customer createCustomer(Customer customer) {
         return getCustomersEntity() != null ?
                 getCustomersEntity().create(customer) : null;
+    }
+
+    public Membership createMembership(Membership membership) {
+        return getMembershipsEntity() != null ?
+                getMembershipsEntity().create(membership) : null;
     }
 /*
     public boolean deleteCustomer(int id) {
@@ -97,9 +124,19 @@ public User createUser(User user) {
     }
     */
 
+    public List<Schedule> findAllSchedules() {
+        return getSchedulesEntity() != null ?
+                getSchedulesEntity().findAll() : null;
+    }
+
+
     public List<District> findAllDistricts() {
         return getDistrictsEntity() != null ?
                 getDistrictsEntity().findAll() : null;
+    }
+    public List<Membership> findAllMemberships() {
+        return getMembershipsEntity() != null ?
+                getMembershipsEntity().findAll() : null;
     }
 
     public User findUserEmailPassword(String email,String password) {
