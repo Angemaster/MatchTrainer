@@ -124,6 +124,9 @@ public class CustomersBean implements Serializable{
     public String newCustomer3(){
         return "success";
     }
+    public String newCustomer4(){
+        return "success";
+    }
 
     public String createCustomer(){
         User user =usersBean.createUser();
