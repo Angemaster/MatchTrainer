@@ -16,7 +16,8 @@ import java.util.Date;
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
-    private  UsersBean usersBean;
+
+
     public CustomersBean(){
         service = new MatchTrainerService();
     }
@@ -111,7 +112,7 @@ public class CustomersBean implements Serializable{
     }
 
     public String createCustomer(){
-        usersBean = new UsersBean();
+        /*   UsersBean usersBean = new UsersBean();
         User user =usersBean.createUser();
         if (user!= null ) {
             this.getCustomer().setUserId(user.getId());
@@ -119,10 +120,9 @@ public class CustomersBean implements Serializable{
             return "success";
         }else{
             return  "error";
-        }
+        }*/
 
-        /*service.createCustomer(this.getDistrictId(),this.getFirstName(),this.getLastName(),this.getGender(),this.getAge());*/
-
+            return  "error";
 
     }
 

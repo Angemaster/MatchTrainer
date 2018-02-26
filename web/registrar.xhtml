@@ -21,32 +21,32 @@
                         <div class="col-md-12">
                             <div class="col-md-5">
                                 <div class="form-group">
-                                    <h:inputText  styleClass="form-control" pt:placeholder="Correo"/>
+                                    <h:inputText  id="correoRegistrar"  styleClass="form-control" pt:placeholder="Correo"/>
                                 </div>
 
                                 <div class="form-group">
-                                    <h:inputText value="#{customersBean.firstName}" styleClass="form-control" pt:placeholder="Nombres"/>
+                                    <h:inputText id="nombresRegistrar" value="#{customersBean.firstName}" styleClass="form-control" pt:placeholder="Nombres"/>
                                 </div>
                                 <div class="form-group">
                                     <h:outputLabel for="tipoCuenta" value="Tipo de Cuenta"/>
-                                    <h:selectOneRadio id="tipoCuenta" value="#{usersBean.profileId}" >
+                                    <h:selectOneRadio id="tipoCuenta" >
                                         <f:selectItem  itemValue="2" itemLabel="Visitante" />
                                         <f:selectItem itemValue="3" itemLabel="Entrenador Personal" />
                                     </h:selectOneRadio>
                                 </div>
 
                                 <div class="form-group">
-                                    <h:inputText value="#{customersBean.age}" styleClass="form-control" />
+                                    <h:inputText id="edadRegistrar" value="#{customersBean.age}" styleClass="form-control" />
                                 </div>
                             </div>
 
                             <div class="col-md-5 col-md-offset-2">
                                 <div class="form-group">
-                                    <h:inputSecret   styleClass="form-control" pt:placeholder="Contraseña"/>
+                                    <h:inputSecret id="contraseñaRegistrar" styleClass="form-control" pt:placeholder="Contraseña"/>
                                 </div>
 
                                 <div class="form-group">
-                                    <h:inputText value="#{customersBean.lastName}"  styleClass="form-control" pt:placeholder="Apellidos"/>
+                                    <h:inputText id="apellidosRegistrar" value="#{customersBean.lastName}" styleClass="form-control" pt:placeholder="Apellidos"/>
                                 </div>
 
                                 <div class="form-group">
@@ -58,7 +58,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <h:selectOneMenu value="#{customersBean.districtId}"  styleClass="form-control">
+                                    <h:selectOneMenu value="#{customersBean.districtId}" styleClass="form-control">
                                         <f:selectItem itemLabel="--Seleccione--" itemValue="-1"/>
                                         <f:selectItems value="#{districtsBean.districts}" var="distrito"  itemLabel="#{distrito.name}" itemValue="#{distrito.id}" />
                                     </h:selectOneMenu>

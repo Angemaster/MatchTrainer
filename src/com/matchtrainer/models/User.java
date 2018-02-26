@@ -11,11 +11,11 @@ public class User {
     }
 
     public User(int id, int profileId, String email, String password, boolean enabled) {
-        this.setId(id);
-        this.setProfileId(profileId);
-        this.setEmail(email);
-        this.setPassword(password);
-        this.setEnabled(enabled);
+        this.id = id;
+        this.profileId = profileId;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
     }
 
     public int getId() {
