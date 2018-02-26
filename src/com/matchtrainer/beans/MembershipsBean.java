@@ -28,7 +28,7 @@ public class MembershipsBean implements Serializable {
         this.membership = membership;
     }
 
-    public List<Membership> getMembershipsBean(){
+    public List<Membership> getMemberships(){
         return service.findAllMemberships();
     }
 

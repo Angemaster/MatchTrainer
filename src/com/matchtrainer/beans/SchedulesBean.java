@@ -4,6 +4,7 @@ import com.matchtrainer.models.Schedule;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class SchedulesBean implements Serializable {
 
@@ -17,6 +18,11 @@ public class SchedulesBean implements Serializable {
     public Schedule getSchedule() {
         return schedule;
     }
+
+    public List<Schedule> getSchedules(){
+        return service.findAllSchedules();
+    }
+
 
     public void setSchedule(Schedule schedule) {
         this.schedule = schedule;
