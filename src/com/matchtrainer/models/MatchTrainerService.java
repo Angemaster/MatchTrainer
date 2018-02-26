@@ -117,6 +117,10 @@ public class MatchTrainerService {
         return getDistrictsEntity() != null ?
                 getDistrictsEntity().findAll() : null;
     }
+    public List<Membership> findAllMemberships() {
+        return getMembershipsEntity() != null ?
+                getMembershipsEntity().findAll() : null;
+    }
 
     public User findUserEmailPassword(String email,String password) {
         return getUsersEntity() != null ?
