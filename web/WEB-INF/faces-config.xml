@@ -14,6 +14,7 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/porque.xhtml</from-view-id>
         <navigation-case>
@@ -22,6 +23,11 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+
+
+
+
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
         <navigation-case>
@@ -38,6 +44,7 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/ayuda.xhtml</from-view-id>
         <navigation-case>
@@ -46,6 +53,17 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
