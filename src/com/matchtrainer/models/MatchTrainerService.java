@@ -15,6 +15,7 @@ public class MatchTrainerService {
     private UsersEntity usersEntity;
     private MembershipsEntity membershipsEntity;
     private SchedulesEntity schedulesEntity;
+    private ReservationsEntity reservationsEntity;
 
     private Connection getConnection() {
         if (connection == null)  {
@@ -82,6 +83,16 @@ public class MatchTrainerService {
         return schedulesEntity;
     }
 
+    protected ReservationsEntity getReservationsEntity() {
+        if(getConnection() != null) {
+            if(reservationsEntity == null) {
+                reservationsEntity = new ReservationsEntity();
+                reservationsEntity.setConnection(getConnection());
+            }
+        }
+        return reservationsEntity;
+    }
+
 /*
     public List<Customer> findAllCustomers() {
         return getCustomersEntity() != null ?
@@ -133,6 +144,10 @@ public class MatchTrainerService {
 
     public List<Customer> findAllCustomersByProfile(int profileId) {
         return getCustomersEntity() != null ? getCustomersEntity().findByProfileId(profileId) : null;
+    }
+
+    public List<Reservation> findAllReservationsByVisitor(int visitorId) {
+        return getReservationsEntity() != null ? getReservationsEntity().findById(visitorId) : null;
     }
 
 
