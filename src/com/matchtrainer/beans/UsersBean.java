@@ -65,6 +65,12 @@ public class UsersBean implements Serializable {
         this.getUser().setEnabled(enabled);
     }
 
+
+    public String searchUser1(){
+        return "success";
+    }
+
+
     public String searchUser(){
         this.setUser(new User());
         return "success";

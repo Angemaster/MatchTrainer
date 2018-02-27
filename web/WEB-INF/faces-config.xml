@@ -14,6 +14,7 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/porque.xhtml</from-view-id>
         <navigation-case>
@@ -22,6 +23,44 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer3}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/politica.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/porque.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer4}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
         <navigation-case>
@@ -30,6 +69,44 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/termino.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/termino.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/termino.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer3}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/politica.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/termino.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer4}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/politica.xhtml</from-view-id>
         <navigation-case>
@@ -38,6 +115,47 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+
+
+    <navigation-rule>
+    <from-view-id>/politica.xhtml</from-view-id>
+    <navigation-case>
+        <from-action>#{customersBean.newCustomer1}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>/porque.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/politica.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/politica.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer3}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/politica.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/politica.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer4}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
     <navigation-rule>
         <from-view-id>/ayuda.xhtml</from-view-id>
         <navigation-case>
@@ -46,6 +164,58 @@
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+    <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer2}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+    <from-view-id>/ayuda.xhtml</from-view-id>
+    <navigation-case>
+        <from-action>#{customersBean.newCustomer3}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>/politica.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
+    <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.newCustomer4}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
@@ -54,14 +224,35 @@
             <to-view-id>/login.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{usersBean.searchUser1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/registrar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+    <from-view-id>/porque.xhtml</from-view-id>
+    <navigation-case>
+        <from-action>#{usersBean.searchUser}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>/login.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+
     <navigation-rule>
         <from-view-id>/porque.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{usersBean.searchUser}</from-action>
+            <from-action>#{usersBean.searchUser1}</from-action>
             <from-outcome>success</from-outcome>
-            <to-view-id>/login.xhtml</to-view-id>
+            <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
         <navigation-case>
@@ -70,6 +261,18 @@
             <to-view-id>/login.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/termino.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{usersBean.searchUser1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/registrar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
     <navigation-rule>
         <from-view-id>/politica.xhtml</from-view-id>
         <navigation-case>
@@ -78,6 +281,16 @@
             <to-view-id>/login.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/politica.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{usersBean.searchUser1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/registrar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/ayuda.xhtml</from-view-id>
         <navigation-case>
@@ -88,12 +301,27 @@
     </navigation-rule>
 
     <navigation-rule>
+        <from-view-id>/ayuda.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{usersBean.searchUser1}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/registrar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    
+    <navigation-rule>
         <from-view-id>/login.xhtml</from-view-id>
         <navigation-case>
             <from-action>#{usersBean.doValidateUser}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
+
+
+
+
+
         <navigation-case>
             <from-action>#{usersBean.doValidateUser}</from-action>
             <from-outcome>error</from-outcome>
