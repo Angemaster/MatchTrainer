@@ -154,6 +154,10 @@ public class CustomersBean implements Serializable{
         return "success";
     }
 
+    public String newCustomer6(){
+        return "success";
+    }
+
 
 
     /*
