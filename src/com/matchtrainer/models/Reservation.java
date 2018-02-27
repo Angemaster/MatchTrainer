@@ -16,9 +16,6 @@ public class Reservation {
     private String commentary;
     private boolean enabled;
 
-    public Reservation() {
-    }
-
     public Reservation(int customerId, int trainerId, int visitorId, String trainingPurpose, String traininGlevel, String traininPlace, Date meetingDate, String address, Date hour, String state, String commentary, boolean enabled) {
         this.customerId = customerId;
         this.trainerId = trainerId;
@@ -32,6 +29,10 @@ public class Reservation {
         this.state = state;
         this.commentary = commentary;
         this.enabled = enabled;
+    }
+
+    public Reservation() {
+
     }
 
     public int getCustomerId() {

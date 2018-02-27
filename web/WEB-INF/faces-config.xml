@@ -665,5 +665,14 @@
             </navigation-case>
         </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/reservas.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{reservationsBean.viewReservation}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verReserva.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
 
     </faces-config>
