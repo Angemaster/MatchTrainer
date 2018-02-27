@@ -315,18 +315,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
         <navigation-case>
@@ -526,7 +514,7 @@
     <navigation-rule>
     <from-view-id>/porque.xhtml</from-view-id>
     <navigation-case>
-        <from-action>#{usersBean.newCustomer}</from-action>
+        <from-action>#{customersBean.newCustomer}</from-action>
         <from-outcome>success</from-outcome>
         <to-view-id>/registrar.xhtml</to-view-id>
     </navigation-case>
@@ -547,7 +535,7 @@
     <navigation-rule>
         <from-view-id>/buscador.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{usersBean.newCustomer}</from-action>
+            <from-action>#{customersBean.newCustomer}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
@@ -567,7 +555,7 @@
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{usersBean.newCustomer}</from-action>
+            <from-action>#{customersBean.newCustomer}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
@@ -587,7 +575,7 @@
     <navigation-rule>
         <from-view-id>/politica.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{usersBean.newCustomer}</from-action>
+            <from-action>#{customersBean.newCustomer}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
@@ -607,7 +595,7 @@
     <navigation-rule>
         <from-view-id>/ayuda.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{usersBean.newCustomer}</from-action>
+            <from-action>#{customersBean.newCustomer}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/registrar.xhtml</to-view-id>
         </navigation-case>
