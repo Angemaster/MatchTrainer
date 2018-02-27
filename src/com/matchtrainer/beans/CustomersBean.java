@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Named
@@ -17,16 +18,20 @@ import java.util.Date;
 public class CustomersBean implements Serializable{
     private MatchTrainerService service;
     private Customer customer;
+    private int cliente=2;
+    private int entrenador=3;
     @Inject
     private UsersBean usersBean;
+
 
     public CustomersBean(){
         service = new MatchTrainerService();
     }
-/*
-*  public List<Customer> getCustomersByTrainer(){
-        return service.findAllCustomers();
-    }*/
+
+
+    public List<Customer> getCustomers(){
+        return service.findAllCustomersByProfile(entrenador);
+    }
 
     public Customer getCustomer() {
         return customer;
@@ -107,6 +112,8 @@ public class CustomersBean implements Serializable{
     public void setRegistrationDate(Date registrationDate){
         this.getCustomer().setRegistrationDate(registrationDate);
     }
+
+
 
     public String newCustomer(){
         this.usersBean.setUser(new User());

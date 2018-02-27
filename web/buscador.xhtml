@@ -8,16 +8,16 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:f = "http://java.sun.com/jsf/core"
-                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:c="http://java.sun.com/jsp/jstl/core"
                 template="templates/base.xhtml"
                 xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
     <ui:define name="content-area">
         <h:form styleClass="form-horizontal" role="form">
-            <div class="col-md-15">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <div class="input-group">
                                     <h:inputText styleClass="form-control" pt:placeholder="Buscar"/>
@@ -60,22 +60,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title"><h:outputText value="Buscador de entrenador"/></h3>
-                                </div>
                                 <div class="panel-body">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <h:inputText styleClass="form-control" pt:placeholder="Buscar por Nombres y Apellidos"/>
-                                            <span class="input-group-btn">
-                                    <h:commandButton styleClass="btn btn-default" value="Go"/>
-                                </span>
+                                    <c:forEach var="listTrainer" items="#{customersBean.customers}">
+                                        <div class=" jumbotron jumbotron-fluid">
+                                            <div class="col-md-3">
+                                                <h:graphicImage value="resources/image/gym.png"/>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h:outputText value="#{listTrainer.firstName} + #{listTrainer.lastName}" />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <h:commandButton value="Ver" styleClass="btn btn-primary"/>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </c:forEach>
                                 </div>
-                                <div class="panel-footer">Panel footer</div>
+                                <div class="panel-footer">Aqui va la paginacion :"v</div>
                             </div>
                         </div>
                     </div>

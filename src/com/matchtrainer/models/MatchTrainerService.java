@@ -76,7 +76,7 @@ public class MatchTrainerService {
         if(getConnection() != null) {
             if(schedulesEntity == null) {
                 schedulesEntity = new SchedulesEntity();
-               schedulesEntity.setConnection(getConnection());
+                schedulesEntity.setConnection(getConnection());
             }
         }
         return schedulesEntity;
@@ -99,18 +99,15 @@ public class MatchTrainerService {
     }
 */
     public User createUser(User user) {
-        return getUsersEntity() != null ?
-            getUsersEntity().create(user) : null;
+        return getUsersEntity() != null ? getUsersEntity().create(user) : null;
     }
 
     public Customer createCustomer(Customer customer) {
-        return getCustomersEntity() != null ?
-                getCustomersEntity().create(customer) : null;
+        return getCustomersEntity() != null ? getCustomersEntity().create(customer) : null;
     }
 
     public Membership createMembership(Membership membership) {
-        return getMembershipsEntity() != null ?
-                getMembershipsEntity().create(membership) : null;
+        return getMembershipsEntity() != null ? getMembershipsEntity().create(membership) : null;
     }
 /*
     public boolean deleteCustomer(int id) {
@@ -125,8 +122,7 @@ public class MatchTrainerService {
     */
 
     public List<Schedule> findAllSchedules() {
-        return getSchedulesEntity() != null ?
-                getSchedulesEntity().findAll() : null;
+        return getSchedulesEntity() != null ? getSchedulesEntity().findAll() : null;
     }
 
 
@@ -134,13 +130,17 @@ public class MatchTrainerService {
         return getDistrictsEntity() != null ?
                 getDistrictsEntity().findAll() : null;
     }
+
+    public List<Customer> findAllCustomersByProfile(int profileId) {
+        return getCustomersEntity() != null ? getCustomersEntity().findById(profileId) : null;
+    }
+
+
     public List<Membership> findAllMemberships() {
-        return getMembershipsEntity() != null ?
-                getMembershipsEntity().findAll() : null;
+        return getMembershipsEntity() != null ? getMembershipsEntity().findAll() : null;
     }
 
     public User findUserEmailPassword(String email,String password) {
-        return getUsersEntity() != null ?
-                getUsersEntity().findByEmailPassword(email,password) : null;
+        return getUsersEntity() != null ? getUsersEntity().findByEmailPassword(email,password) : null;
     }
 }

@@ -29,6 +29,37 @@ public class CustomersEntity extends BaseEntity {
     }
 
 
+    private List<Customer> findByCriteria(String sql) {
+        List<Customer> customers;
+        if(getConnection() != null) {
+            customers = new ArrayList<>();
+            try {
+                ResultSet resultSet = getConnection()
+                        .createStatement()
+                        .executeQuery(sql);
+                while (resultSet.next()) {
+                    Customer customer = new Customer();
+                            customer.setId(resultSet.getInt("id"));
+                            customer.setFirstName(resultSet.getString("firstname"));
+                            customer.setLastName(resultSet.getString("lastname"));
+                    customers.add(customer);
+                }
+                return customers;
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    public List<Customer> findById(int id) {
+        String query="SELECT C.id AS id , C.firstname AS firstname , C.lastname AS lastname, C.photoname AS photoname , " +
+                "C.photoUrl AS photoUrl FROM customer AS C INNER JOIN user AS U ON C.user_id = U.id where U.profile_id=" + id;
+        return findByCriteria(query);
+    }
+
+
 /*
     private List<Customer> findByCriteria(String sql) {
         List<Customer> customers;
