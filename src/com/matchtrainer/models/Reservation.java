@@ -11,7 +11,7 @@ public class Reservation {
     private String traininPlace;
     private Date meetingDate;
     private String address;
-    private String hour;
+    private Date hour;
     private String state;
     private String commentary;
     private boolean enabled;
@@ -19,19 +19,19 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(int customerId, int trainerId, int visitorId, String trainingPurpose, String traininGlevel, String traininPlace, Date meetingDate, String address, String hour, String state, String commentary, boolean enabled) {
-        this.setCustomerId(customerId);
-        this.setTrainerId(trainerId);
-        this.setVisitorId(visitorId);
-        this.setTrainingPurpose(trainingPurpose);
-        this.setTraininGlevel(traininGlevel);
-        this.setTraininPlace(traininPlace);
-        this.setMeetingDate(meetingDate);
-        this.setAddress(address);
-        this.setHour(hour);
-        this.setState(state);
-        this.setCommentary(commentary);
-        this.setEnabled(enabled);
+    public Reservation(int customerId, int trainerId, int visitorId, String trainingPurpose, String traininGlevel, String traininPlace, Date meetingDate, String address, Date hour, String state, String commentary, boolean enabled) {
+        this.customerId = customerId;
+        this.trainerId = trainerId;
+        this.visitorId = visitorId;
+        this.trainingPurpose = trainingPurpose;
+        this.traininGlevel = traininGlevel;
+        this.traininPlace = traininPlace;
+        this.meetingDate = meetingDate;
+        this.address = address;
+        this.hour = hour;
+        this.state = state;
+        this.commentary = commentary;
+        this.enabled = enabled;
     }
 
     public int getCustomerId() {
@@ -98,11 +98,11 @@ public class Reservation {
         this.address = address;
     }
 
-    public String getHour() {
+    public Date getHour() {
         return hour;
     }
 
-    public void setHour(String hour) {
+    public void setHour(Date hour) {
         this.hour = hour;
     }
 
