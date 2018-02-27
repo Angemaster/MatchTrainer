@@ -19,7 +19,7 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <h:graphicImage library="image" name="gym.png" />
+                                    <h:graphicImage library="image"  />
                                 </div>
                                 <div class="form-group">
                                     <h:commandButton value="Continuar" styleClass="btn btn-primary" />
@@ -28,13 +28,13 @@
                             <div class="col-md-9">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <h:outputText value="Nombres"/>
+                                        <h:outputText value="#{customersBean.lastName}"/>
                                     </div>
                                     <div class="form-group">
-                                        <h:outputText value="Apellidos"/>
+                                        <h:outputText value="#{customersBean.id}"/>
                                     </div>
                                     <div class="form-group">
-                                        <h:outputText value="Tiempo"/>
+                                        <h:outputText value="#{customersBean.firstName}"/>
                                     </div>
                                     <div class="form-group">
                                         <h:outputText value="Distrito"/>

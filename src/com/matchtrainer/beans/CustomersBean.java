@@ -6,11 +6,14 @@ import com.matchtrainer.models.MatchTrainerService;
 import com.matchtrainer.models.User;
 
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.model.SelectItem;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 
 @Named
@@ -20,18 +23,18 @@ public class CustomersBean implements Serializable{
     private Customer customer;
     private int cliente=2;
     private int entrenador=3;
+
     @Inject
     private UsersBean usersBean;
-
 
     public CustomersBean(){
         service = new MatchTrainerService();
     }
 
-
     public List<Customer> getCustomers(){
         return service.findAllCustomersByProfile(entrenador);
     }
+
 
     public Customer getCustomer() {
         return customer;
@@ -39,6 +42,14 @@ public class CustomersBean implements Serializable{
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public int getId(){
+        return this.getCustomer().getId();
+    }
+
+    public void setId(int id){
+        this.getCustomer().setId(id);
     }
 
     public int getUserId(){
@@ -114,13 +125,46 @@ public class CustomersBean implements Serializable{
     }
 
 
-
     public String newCustomer(){
         this.usersBean.setUser(new User());
         this.setCustomer(new Customer());
         return "success";
     }
 
+
+    public String seeStart(){
+        return "success";
+    }
+
+    public String seeWhyMatchTrainer(){
+        return "success";
+    }
+
+
+    public String seeSearchTrainer(){
+        return "success";
+    }
+
+    public String seeTermsandConditions(){
+        return "success";
+    }
+
+    public String  seePrivacyPolicies(){
+        return "success";
+    }
+
+    public String seeHelp(){
+        return "success";
+    }
+
+
+
+
+
+    public String viewCustomer(Customer customer){
+        this.setCustomer(customer);
+        return "success";
+    }
 
     public String createCustomer(){
         User user =usersBean.createUser();

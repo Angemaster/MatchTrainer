@@ -12,7 +12,55 @@
                 template="dashboard.xhtml">
     <ui:define name="content">
         <h:form styleClass="form-horizontal" role="form">
-            mis reservas estan mas vacios que sus sentimientos de ella hacia mi :"v
+            <div class="rows">
+
+                <ui:repeat value="#{customersBean.customers}" var="customer">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <div class="col-sm-6 col-md-2">
+                                        <h:graphicImage styleClass="img-thumbnail"   value="resources/image/Logo.png" />
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputText value="#{customer.firstName} #{customer.lastName}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <h:commandButton styleClass="btn btn-primary "   value="Ver" action="#{reservationsBean.viewReservation}"/>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h:commandButton styleClass="btn btn-primary "   value="Pagar" action="#{customersBean.viewCustomer(customer)}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <h:outputText value="Estado" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h:outputText value="#{customer.firstName} #{customer.lastName}" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-4">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ui:repeat>
+            </div>
         </h:form>
     </ui:define>
 </ui:composition>

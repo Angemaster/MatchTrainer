@@ -53,11 +53,12 @@ public class CustomersEntity extends BaseEntity {
         return null;
     }
 
-    public List<Customer> findById(int id) {
+    public List<Customer> findByProfileId(int id) {
         String query="SELECT C.id AS id , C.firstname AS firstname , C.lastname AS lastname, C.photoname AS photoname , " +
                 "C.photoUrl AS photoUrl FROM customer AS C INNER JOIN user AS U ON C.user_id = U.id where U.profile_id=" + id;
         return findByCriteria(query);
     }
+
 
 
 /*
