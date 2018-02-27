@@ -133,28 +133,28 @@ public class CustomersBean implements Serializable{
     }
 
 
-    public String newCustomer1(){
+    public String seeStart(){
         return "success";
     }
 
-    public String newCustomer2(){
+    public String seeWhyMatchTrainer(){
         return "success";
     }
 
 
-    public String newCustomer3(){
+    public String seeSearchTrainer(){
         return "success";
     }
 
-    public String newCustomer4(){
+    public String seeTermsandConditions(){
         return "success";
     }
 
-    public String newCustomer5(){
+    public String  seePrivacyPolicies(){
         return "success";
     }
 
-    public String newCustomer6(){
+    public String seeHelp(){
         return "success";
     }
 
