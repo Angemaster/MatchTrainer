@@ -127,6 +127,73 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.seeStart}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+    <navigation-rule>
+        <from-view-id>/buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.seeWhyMatchTrainer}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/porque.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+    <navigation-rule>
+        <from-view-id>/buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.seeSearchTrainer}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/buscador.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.seeTermsandConditions}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/termino.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+    <from-view-id>/buscador.xhtml</from-view-id>
+    <navigation-case>
+        <from-action>#{customersBean.seePrivacyPolicies}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>/politica.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.seeHelp}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/ayuda.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
+
+
+
+
+
+
 
     <navigation-rule>
         <from-view-id>/termino.xhtml</from-view-id>
