@@ -131,6 +131,36 @@ public class CustomersBean implements Serializable{
         return "success";
     }
 
+
+    public String seeStart(){
+        return "success";
+    }
+
+    public String seeWhyMatchTrainer(){
+        return "success";
+    }
+
+
+    public String seeSearchTrainer(){
+        return "success";
+    }
+
+    public String seeTermsandConditions(){
+        return "success";
+    }
+
+    public String  seePrivacyPolicies(){
+        return "success";
+    }
+
+    public String seeHelp(){
+        return "success";
+    }
+
+
+
+
+
     public String viewCustomer(Customer customer){
         this.setCustomer(customer);
         return "success";
