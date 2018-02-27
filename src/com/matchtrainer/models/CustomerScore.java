@@ -3,18 +3,10 @@ package com.matchtrainer.models;
 public class CustomerScore {
     private int id;
     private int trainerId;
-    private int starnumber;
+    private int starNumber;
     private String  commentary;
 
-    public CustomerScore(int id, int trainerId, int starnumber, String commentary) {
-        this.setId(id);
-        this.setTrainerId(trainerId);
-        this.setStarnumber(starnumber);
-        this.setCommentary(commentary);
-    }
-
     public CustomerScore() {
-
     }
 
     public int getId() {
@@ -33,12 +25,12 @@ public class CustomerScore {
         this.trainerId = trainerId;
     }
 
-    public int getStarnumber() {
-        return starnumber;
+    public int getStarNumber() {
+        return starNumber;
     }
 
-    public void setStarnumber(int starnumber) {
-        this.starnumber = starnumber;
+    public void setStarNumber(int starNumber) {
+        this.starNumber = starNumber;
     }
 
     public String getCommentary() {
@@ -46,6 +38,13 @@ public class CustomerScore {
     }
 
     public void setCommentary(String commentary) {
+        this.commentary = commentary;
+    }
+
+    public CustomerScore(int id, int trainerId, int starNumber, String commentary) {
+        this.id = id;
+        this.trainerId = trainerId;
+        this.starNumber = starNumber;
         this.commentary = commentary;
     }
 }
