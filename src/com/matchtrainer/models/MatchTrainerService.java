@@ -132,7 +132,7 @@ public class MatchTrainerService {
     }
 
     public List<Customer> findAllCustomersByProfile(int profileId) {
-        return getCustomersEntity() != null ? getCustomersEntity().findById(profileId) : null;
+        return getCustomersEntity() != null ? getCustomersEntity().findByProfileId(profileId) : null;
     }
 
 
