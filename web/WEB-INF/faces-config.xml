@@ -691,6 +691,23 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/entrenadores.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.viewCustomer(trainer)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verEntrenador.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/solicitudes.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.viewCustomer(client)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verSolicitudes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
 
 </faces-config>

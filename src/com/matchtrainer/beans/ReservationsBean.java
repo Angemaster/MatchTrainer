@@ -24,6 +24,10 @@ public class ReservationsBean implements Serializable {
         visitorId = 4;
         return service.findAllReservationsByVisitor(visitorId);
     }
+    public List<Reservation> getClient(){
+        return service.findAllRequestsByClient(2);
+    }
+
 
     public Reservation getReservation(){return reservation; }
 
@@ -72,6 +76,19 @@ public class ReservationsBean implements Serializable {
         return "success";
     }
     public String viewPayReservation(){
+        return "success";
+    }
+    public String viewDenyReservation(){
+
+        return "Success";
+    }
+
+    public String updateReservationState(){
+        service.updateState(this.getReservation());
+        return "success";
+    }
+    public String updateReservationCommentary(){
+        service.updateCommentary(this.getReservation());
         return "success";
     }
 }

@@ -136,7 +136,18 @@ public class MatchTrainerService {
     public Membership createMembership(Membership membership) {
         return getMembershipsEntity() != null ? getMembershipsEntity().create(membership) : null;
     }
+    public boolean updateState(Reservation reservation) {
+        return getReservationsEntity() != null ?
+                getReservationsEntity().updateState(reservation) : false;
+    }
+
+    public boolean updateCommentary(Reservation reservation) {
+        return getReservationsEntity() != null ?
+                getReservationsEntity().updateCommentary(reservation) : false;
+    }
+
 /*
+
     public boolean deleteCustomer(int id) {
         return getCustomersEntity() != null ?
                 getCustomersEntity().delete(id) : false;
@@ -164,6 +175,13 @@ public class MatchTrainerService {
 
     public List<Reservation> findAllReservationsByVisitor(int visitorId) {
         return getReservationsEntity() != null ? getReservationsEntity().findById(visitorId) : null;
+    }
+
+    public List<Customer> findAllTrainerByClient(int visitorId) {
+        return getCustomersEntity() != null ? getCustomersEntity().findById(visitorId) : null;
+    }
+    public List<Reservation> findAllRequestsByClient(int trainerId) {
+        return getReservationsEntity() != null ? getReservationsEntity().findByTrainerId(trainerId) : null;
     }
 
 
