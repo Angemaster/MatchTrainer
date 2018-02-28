@@ -35,6 +35,10 @@ public class CustomersBean implements Serializable{
         return service.findAllCustomersByProfile(entrenador);
     }
 
+    public List<Customer> getTrainer(){
+        return service.findAllTrainerByClient(1);
+    }
+
 
     public Customer getCustomer() {
         return customer;
@@ -166,6 +170,7 @@ public class CustomersBean implements Serializable{
         return "success";
     }
 
+
     public String createCustomer(){
         User user =usersBean.createUser();
         if (user!= null ) {
@@ -176,6 +181,8 @@ public class CustomersBean implements Serializable{
             return  "error";
         }
     }
+
+
 
 
     /*

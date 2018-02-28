@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f = "http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="dashboard.xhtml">
+    <ui:define name="content">
+        <h:form styleClass="form-horizontal" role="form">
+            <div class="col-md-12">
+                <div class="col-md-4 col-md-offset-1">
+                    <div class="form-group">
+                        <h:outputLabel for="nombres" value="Nombres"/>
+                        <h:inputText id="nombres" styleClass="form-control" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel for="foto" value="Foto"/>
+                        <h:inputText id="foto" styleClass="form-control" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel for="distrito" value="distrito"/>
+                        <h:selectOneMenu id="distrito" value="" styleClass="form-control">
+                            <f:selectItem itemValue="-1" itemLabel="Elegir Distrito" />
+                        </h:selectOneMenu>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="form-group">
+                        <h:outputLabel for="apellidos" value="Apellidos"/>
+                        <h:inputText id="apellidos" styleClass="form-control" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel for="edad" value="Edad"/>
+                        <h:inputText id="edad" styleClass="form-control" value=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-2 col-md-offset-6">
+                    <div class="form-group">
+                        <h:commandButton value="Guardar" styleClass="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </ui:define>
+</ui:composition>

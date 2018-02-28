@@ -3,25 +3,35 @@ package com.matchtrainer.models;
 import java.util.Date;
 
 public class Reservation {
-    private int customerId;
+    private int id;
     private int trainerId;
     private int visitorId;
+    private String firstName;
+    private String lastName;
     private String trainingPurpose;
-    private String traininGlevel;
+    private String trainingLevel;
     private String traininPlace;
     private Date meetingDate;
     private String address;
-    private Date hour;
+    private String hour;
     private String state;
     private String commentary;
     private boolean enabled;
+    private String photoname;
+    private String photourl;
 
-    public Reservation(int customerId, int trainerId, int visitorId, String trainingPurpose, String traininGlevel, String traininPlace, Date meetingDate, String address, Date hour, String state, String commentary, boolean enabled) {
-        this.customerId = customerId;
+    public Reservation() {
+
+    }
+
+    public Reservation(int id, int trainerId, int visitorId, String firstName, String lastName, String trainingPurpose, String trainingLevel, String traininPlace, Date meetingDate, String address, String hour, String state, String commentary, boolean enabled, String photoname, String photourl) {
+        this.id = id;
         this.trainerId = trainerId;
         this.visitorId = visitorId;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.trainingPurpose = trainingPurpose;
-        this.traininGlevel = traininGlevel;
+        this.trainingLevel = trainingLevel;
         this.traininPlace = traininPlace;
         this.meetingDate = meetingDate;
         this.address = address;
@@ -29,18 +39,16 @@ public class Reservation {
         this.state = state;
         this.commentary = commentary;
         this.enabled = enabled;
+        this.photoname = photoname;
+        this.photourl = photourl;
     }
 
-    public Reservation() {
-
+    public int getId() {
+        return id;
     }
 
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getTrainerId() {
@@ -59,6 +67,22 @@ public class Reservation {
         this.visitorId = visitorId;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getTrainingPurpose() {
         return trainingPurpose;
     }
@@ -67,12 +91,12 @@ public class Reservation {
         this.trainingPurpose = trainingPurpose;
     }
 
-    public String getTraininGlevel() {
-        return traininGlevel;
+    public String getTrainingLevel() {
+        return trainingLevel;
     }
 
-    public void setTraininGlevel(String traininGlevel) {
-        this.traininGlevel = traininGlevel;
+    public void setTrainingLevel(String trainingLevel) {
+        this.trainingLevel = trainingLevel;
     }
 
     public String getTraininPlace() {
@@ -99,11 +123,11 @@ public class Reservation {
         this.address = address;
     }
 
-    public Date getHour() {
+    public String getHour() {
         return hour;
     }
 
-    public void setHour(Date hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 
@@ -130,4 +154,21 @@ public class Reservation {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
+    public String getPhotoname() {
+        return photoname;
+    }
+
+    public void setPhotoname(String photoname) {
+        this.photoname = photoname;
+    }
+
+    public String getPhotourl() {
+        return photourl;
+    }
+
+    public void setPhotourl(String photourl) {
+        this.photourl = photourl;
+    }
 }
+

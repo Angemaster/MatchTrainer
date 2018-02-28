@@ -668,11 +668,46 @@
     <navigation-rule>
         <from-view-id>/reservas.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{reservationsBean.viewReservation}</from-action>
+            <from-action>#{reservationsBean.viewReservation(reservation)}</from-action>
             <from-outcome>success</from-outcome>
             <to-view-id>/verReserva.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/reservas.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{reservationsBean.viewPayReservation}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/pagarReservas.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/pagarReservas.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{reservationsBean.returnReservation}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/reservas.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
-    </faces-config>
+    <navigation-rule>
+        <from-view-id>/entrenadores.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.viewCustomer(trainer)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verEntrenador.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/solicitudes.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{customersBean.viewCustomer(client)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verSolicitudes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+</faces-config>
