@@ -17,9 +17,10 @@ public class ReservationsEntity extends BaseEntity{
                         .executeQuery(sql);
                 while (resultSet.next()) {
                     Reservation reservation = new Reservation();
-                    //reservation.setId(resultSet.getInt("id"));
-                   // reservation.setFirstName(resultSet.getString("firstname"));
-                    //reservation.setLastName(resultSet.getString("lastname"));
+
+                    reservation.setTrainingPurpose(resultSet.getString("trainingpurpose"));
+                    reservation.setState(resultSet.getString("state"));
+
                     reservations.add(reservation);
                 }
                 return reservations;
@@ -31,8 +32,7 @@ public class ReservationsEntity extends BaseEntity{
         return null;
     }
     public List<Reservation> findById(int id) {
-        String query="SELECT C.id AS id , C.firstname AS firstname , C.lastname AS lastname, C.photoname AS photoname , " +
-                "C.photoUrl AS photoUrl FROM customer AS C INNER JOIN user AS U ON C.user_id = U.id where U.profile_id=" + id;
+        String query="SELECT re.trainingpurpose as trainingpurpose, re.traininglevel as traininglevel, re.trainingplace as trainingplace, re.meetingdate as meetingdate, re.address as address, re.hour as hour, re.state as state, re.commentary as commentary,tablaA1.firstname as firstname,tablaA1.lastname as lastname FROM reservation as re INNER JOIN customer as tablaA1 on tablaA1.id = re.trainer_id INNER JOIN customer as tablaA2 on tablaA2.id = re.visitor_id WHERE re.visitor_id="+ id;
         return findByCriteria(query);
     }
 }

@@ -14,7 +14,7 @@
         <h:form styleClass="form-horizontal" role="form">
             <div class="rows">
 
-                <ui:repeat value="#{customersBean.customers}" var="customer">
+                <ui:repeat value="#{reservationsBean.reservations}" var="reservation">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="col-md-12">
@@ -25,14 +25,14 @@
                                     <div class="form-group">
                                     </div>
                                     <div class="form-group">
-                                        <h:outputText value="#{customer.firstName} #{customer.lastName}" />
+                                        <h:outputText value="#{reservation.firstName} #{reservation.lastName}" />
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-3">
-                                            <h:commandButton styleClass="btn btn-primary "   value="Ver" action="#{reservationsBean.viewReservation}"/>
+                                            <h:commandButton styleClass="btn btn-primary "   value="Ver" action="#{reservationsBean.viewReservation(reservation)}"/>
                                         </div>
                                         <div class="col-md-3">
-                                            <h:commandButton styleClass="btn btn-primary "   value="Pagar" action="#{customersBean.viewCustomer(customer)}"/>
+                                            <h:commandButton styleClass="btn btn-primary "   value="Pagar" />
                                         </div>
                                     </div>
                                 </div>
@@ -42,10 +42,10 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-6">
-                                            <h:outputText value="Estado" />
+                                            <h:outputText value="Estado"/>
                                         </div>
                                         <div class="col-md-6">
-                                            <h:outputText value="#{customer.firstName} #{customer.lastName}" />
+                                            <h:outputText value="#{reservation.state}" />
                                         </div>
                                     </div>
                                     <div class="form-group">

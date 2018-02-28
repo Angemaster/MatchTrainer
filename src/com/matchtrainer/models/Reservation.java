@@ -6,22 +6,30 @@ public class Reservation {
     private int customerId;
     private int trainerId;
     private int visitorId;
+    private String firstName;
+    private String lastName;
     private String trainingPurpose;
-    private String traininGlevel;
+    private String trainingLevel;
     private String traininPlace;
     private Date meetingDate;
     private String address;
-    private Date hour;
+    private String hour;
     private String state;
     private String commentary;
     private boolean enabled;
 
-    public Reservation(int customerId, int trainerId, int visitorId, String trainingPurpose, String traininGlevel, String traininPlace, Date meetingDate, String address, Date hour, String state, String commentary, boolean enabled) {
+    public Reservation() {
+
+    }
+
+    public Reservation(int customerId, int trainerId, int visitorId, String firstName, String lastName, String trainingPurpose, String trainingLevel, String traininPlace, Date meetingDate, String address, String hour, String state, String commentary, boolean enabled) {
         this.customerId = customerId;
         this.trainerId = trainerId;
         this.visitorId = visitorId;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.trainingPurpose = trainingPurpose;
-        this.traininGlevel = traininGlevel;
+        this.trainingLevel = trainingLevel;
         this.traininPlace = traininPlace;
         this.meetingDate = meetingDate;
         this.address = address;
@@ -29,10 +37,6 @@ public class Reservation {
         this.state = state;
         this.commentary = commentary;
         this.enabled = enabled;
-    }
-
-    public Reservation() {
-
     }
 
     public int getCustomerId() {
@@ -59,6 +63,22 @@ public class Reservation {
         this.visitorId = visitorId;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getTrainingPurpose() {
         return trainingPurpose;
     }
@@ -67,12 +87,12 @@ public class Reservation {
         this.trainingPurpose = trainingPurpose;
     }
 
-    public String getTraininGlevel() {
-        return traininGlevel;
+    public String getTrainingLevel() {
+        return trainingLevel;
     }
 
-    public void setTraininGlevel(String traininGlevel) {
-        this.traininGlevel = traininGlevel;
+    public void setTrainingLevel(String trainingLevel) {
+        this.trainingLevel = trainingLevel;
     }
 
     public String getTraininPlace() {
@@ -99,11 +119,11 @@ public class Reservation {
         this.address = address;
     }
 
-    public Date getHour() {
+    public String getHour() {
         return hour;
     }
 
-    public void setHour(Date hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 
