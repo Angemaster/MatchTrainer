@@ -16,6 +16,7 @@ public class MatchTrainerService {
     private MembershipsEntity membershipsEntity;
     private SchedulesEntity schedulesEntity;
     private ReservationsEntity reservationsEntity;
+    private CustomersScoreEntity customersScoreEntity;
 
     private Connection getConnection() {
         if (connection == null)  {
@@ -93,6 +94,16 @@ public class MatchTrainerService {
         return reservationsEntity;
     }
 
+    protected CustomersScoreEntity getCustomersScoreEntity() {
+        if(getConnection() != null) {
+            if(customersScoreEntity == null) {
+                customersScoreEntity = new CustomersScoreEntity();
+                customersScoreEntity.setConnection(getConnection());
+            }
+        }
+        return customersScoreEntity;
+    }
+
 /*
     public List<Customer> findAllCustomers() {
         return getCustomersEntity() != null ?
@@ -116,6 +127,11 @@ public class MatchTrainerService {
     public Customer createCustomer(Customer customer) {
         return getCustomersEntity() != null ? getCustomersEntity().create(customer) : null;
     }
+
+    public CustomerScore createCustomerScore(CustomerScore customerScore) {
+        return getCustomersScoreEntity() != null ? getCustomersScoreEntity().create(customerScore) : null;
+    }
+
 
     public Membership createMembership(Membership membership) {
         return getMembershipsEntity() != null ? getMembershipsEntity().create(membership) : null;
