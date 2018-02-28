@@ -3,7 +3,7 @@ package com.matchtrainer.models;
 import java.util.Date;
 
 public class Reservation {
-    private int customerId;
+    private int id;
     private int trainerId;
     private int visitorId;
     private String firstName;
@@ -17,13 +17,15 @@ public class Reservation {
     private String state;
     private String commentary;
     private boolean enabled;
+    private String photoname;
+    private String photourl;
 
     public Reservation() {
 
     }
 
-    public Reservation(int customerId, int trainerId, int visitorId, String firstName, String lastName, String trainingPurpose, String trainingLevel, String traininPlace, Date meetingDate, String address, String hour, String state, String commentary, boolean enabled) {
-        this.customerId = customerId;
+    public Reservation(int id, int trainerId, int visitorId, String firstName, String lastName, String trainingPurpose, String trainingLevel, String traininPlace, Date meetingDate, String address, String hour, String state, String commentary, boolean enabled, String photoname, String photourl) {
+        this.id = id;
         this.trainerId = trainerId;
         this.visitorId = visitorId;
         this.firstName = firstName;
@@ -37,14 +39,16 @@ public class Reservation {
         this.state = state;
         this.commentary = commentary;
         this.enabled = enabled;
+        this.photoname = photoname;
+        this.photourl = photourl;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getId() {
+        return id;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getTrainerId() {
@@ -150,4 +154,21 @@ public class Reservation {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
+    public String getPhotoname() {
+        return photoname;
+    }
+
+    public void setPhotoname(String photoname) {
+        this.photoname = photoname;
+    }
+
+    public String getPhotourl() {
+        return photourl;
+    }
+
+    public void setPhotourl(String photourl) {
+        this.photourl = photourl;
+    }
 }
+

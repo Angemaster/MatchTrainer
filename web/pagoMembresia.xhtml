@@ -15,23 +15,23 @@
         <h:form styleClass="form-horizontal" role="form">
             <div class="panel panel-default">
                 <div class="panel-body">
-                  Duracion de Membresia
+                    Duracion de Membresia
                     <h:selectOneRadio>
-                    <f:selectItem itemValue="30" itemLabel="1 Mes" />
-                    <f:selectItem itemValue="90" itemLabel="3 Meses" />
-                    <f:selectItem itemValue="180" itemLabel="6 Meses" />
+                        <f:selectItem itemValue="30" itemLabel="1 Mes" />
+                        <f:selectItem itemValue="90" itemLabel="3 Meses" />
+                        <f:selectItem itemValue="180" itemLabel="6 Meses" />
                         <f:selectItem itemValue="365" itemLabel="1 Año" />
-                </h:selectOneRadio>
+                    </h:selectOneRadio>
 
-                <br />
+                    <br />
                 </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-body">
                     Opciones de pago
                     <h:selectOneRadio>
-                    <f:selectItem itemValue="Tarjetas" itemLabel="Tarjetas" />
-                    <f:selectItem itemValue="Paypal" itemLabel="Paypal" />
+                        <f:selectItem itemValue="Tarjetas" itemLabel="Tarjetas" />
+                        <f:selectItem itemValue="Paypal" itemLabel="Paypal" />
                     </h:selectOneRadio>
 
                     <br />
@@ -39,11 +39,11 @@
                         <div class="form-group">
                             <h:inputText styleClass="form-control" pt:placeholder="Mes"/>
                         </div>
-                    <div class="form-group">
-                        <h:inputText styleClass="form-control" pt:placeholder="Año"/>
-                    </div>
+                        <div class="form-group">
+                            <h:inputText styleClass="form-control" pt:placeholder="Año"/>
+                        </div>
 
-                </div>
+                    </div>
                     <div class="col-md-5 col-md-offset-1">
                         <div class="form-group">
                             <h:inputText styleClass="form-control" pt:placeholder="Numero de Tarjeta"/>
@@ -53,10 +53,10 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <h:commandButton styleClass="btn btn-primary "   value="Finalizar Pago" action="#{reservationsBean.returnReservation}" />
+                        <h:commandButton styleClass="btn btn-primary "   value="Finalizar Pago"  />
                     </div>
                 </div>
             </div>
-           </h:form>
+        </h:form>
     </ui:define>
 </ui:composition>

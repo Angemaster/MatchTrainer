@@ -20,6 +20,14 @@ public class ReservationsEntity extends BaseEntity{
 
                     reservation.setTrainingPurpose(resultSet.getString("trainingpurpose"));
                     reservation.setState(resultSet.getString("state"));
+                    reservation.setLastName(resultSet.getString("lastname"));
+                    reservation.setFirstName(resultSet.getString("firstname"));
+                    reservation.setCommentary(resultSet.getString("commentary"));
+                    reservation.setHour(resultSet.getString("hour"));
+                    reservation.setMeetingDate(resultSet.getDate("meetingdate"));
+                    reservation.setAddress(resultSet.getString("address"));
+                    reservation.setTrainingLevel(resultSet.getString("traininglevel"));
+                    reservation.setTraininPlace(resultSet.getString("trainingplace"));
 
                     reservations.add(reservation);
                 }

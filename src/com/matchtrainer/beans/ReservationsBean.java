@@ -30,8 +30,8 @@ public class ReservationsBean implements Serializable {
     public void setReservation(Reservation reservation){this.reservation = reservation;}
 
 
-   public int getCustomerId(){return this.getReservation().getCustomerId();}
-   public void setCustomerId(int customerId){this.getReservation().setCustomerId(customerId);}
+   public int getId(){return this.getReservation().getId();}
+   public void setId(int id){this.getReservation().setId(id);}
    public int getTrainerId(){return this.getReservation().getTrainerId();}
    public void setTrainerId(int trainerId){this.getReservation().setTrainerId(trainerId);}
    public String getFirstName(){return this.getReservation().getFirstName();}
@@ -58,9 +58,20 @@ public class ReservationsBean implements Serializable {
    public void setCommentary(String commentary){this.getReservation().setCommentary(commentary);}
    public boolean isEnable(){return this.getReservation().isEnabled();}
    public void setEnable(boolean enable){this.getReservation().setEnabled(enable);}
+   public String getPhotoname(){return this.getReservation().getPhotoname();}
+   public void setPhotoname(String photoname){this.getReservation().setPhotoname(photoname);}
+   public String getPhotourl(){return this.getReservation().getPhotourl();}
+   public void setPhotourl(String photourl){this.getReservation().setPhotourl(photourl);}
+
 
    public String viewReservation(Reservation reservation){
         this.setReservation( reservation);
-        return "Success";}
-
+        return "success";
+    }
+    public String returnReservation(){
+        return "success";
+    }
+    public String viewPayReservation(){
+        return "success";
+    }
 }
