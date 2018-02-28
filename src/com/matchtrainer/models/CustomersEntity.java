@@ -42,6 +42,8 @@ public class CustomersEntity extends BaseEntity {
                             customer.setId(resultSet.getInt("id"));
                             customer.setFirstName(resultSet.getString("firstname"));
                             customer.setLastName(resultSet.getString("lastname"));
+                            customer.setPhotoUrl(resultSet.getString("photourl"));
+                            customer.setPhotoName(resultSet.getString("photoname"));
                     customers.add(customer);
                 }
                 return customers;

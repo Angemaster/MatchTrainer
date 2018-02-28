@@ -5,6 +5,7 @@ import com.matchtrainer.models.User;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import java.awt.event.ActionEvent;
 import java.io.Serializable;
 
 @Named
@@ -12,8 +13,21 @@ import java.io.Serializable;
 public class UsersBean implements Serializable {
     private MatchTrainerService service;
     private User user;
+    private boolean rendered;
+    public  boolean isRendered(){
+
+        return  rendered;
+    }
+    public void setRendered(boolean rendered){
+        this.rendered = rendered;
+    }
+
+    public  void toggleRendered(ActionEvent event){
+        this.rendered = !rendered;
+    }
 
     public UsersBean(){
+        setRendered(true);
         service = new MatchTrainerService();
     }
 
@@ -65,11 +79,9 @@ public class UsersBean implements Serializable {
         this.getUser().setEnabled(enabled);
     }
 
-
     public String searchUser1(){
         return "success";
     }
-
 
     public String searchUser(){
         this.setUser(new User());
@@ -82,10 +94,9 @@ public class UsersBean implements Serializable {
 
     public String doValidateUser(){
         if (service.findUserEmailPassword(this.getEmail(),this.getPassword()) == null)
-        return "error";
-        else
-        return "success";
+            return "error";
+                else
+
+            return "success";
     }
-
-
 }

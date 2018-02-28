@@ -24,7 +24,7 @@
                                     <ui:repeat value="#{customersBean.customers}" var="customer">
                                         <div class="col-sm-6 col-md-4">
                                             <div class="thumbnail">
-                                                <h:graphicImage styleClass="img-thumbnail"   value="resources/image/Logo.png" />
+                                                <h:graphicImage styleClass="img-thumbnail"   value="#{customer.photoUrl}#{customer.photoName}" />
                                                     <div class="col-md-offset-3">
                                                         <h:outputText  value="#{customer.firstName} #{customer.lastName}" />
                                                     </div>

@@ -15,6 +15,7 @@ public class CustomerScoreBean implements Serializable {
     public CustomerScoreBean(){
         service = new MatchTrainerService();
     }
+
     public CustomerScore getCustomerScore() {
         return customerScore;
     }
