@@ -69,8 +69,6 @@ hr {
 
 /* Features */
 .col-1, .col-2, .col-3 {
-    
-    width: 30%;
     float: left;
     padding-left: 15px;
     padding-right: 15px;
