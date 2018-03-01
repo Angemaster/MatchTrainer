@@ -9,6 +9,13 @@ public class CustomerScore {
     public CustomerScore() {
     }
 
+    public CustomerScore(int id, int trainerId, int starNumber, String commentary) {
+        this.id = id;
+        this.trainerId = trainerId;
+        this.starNumber = starNumber;
+        this.commentary = commentary;
+    }
+
     public int getId() {
         return id;
     }
@@ -41,10 +48,5 @@ public class CustomerScore {
         this.commentary = commentary;
     }
 
-    public CustomerScore(int id, int trainerId, int starNumber, String commentary) {
-        this.id = id;
-        this.trainerId = trainerId;
-        this.starNumber = starNumber;
-        this.commentary = commentary;
-    }
+
 }

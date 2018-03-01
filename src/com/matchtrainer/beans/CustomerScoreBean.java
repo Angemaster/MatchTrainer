@@ -61,4 +61,5 @@ public class CustomerScoreBean implements Serializable {
             service.createCustomerScore(this.getCustomerScore());
             return "success";
     }
+
 }

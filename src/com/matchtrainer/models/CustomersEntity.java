@@ -74,6 +74,7 @@ public class CustomersEntity extends BaseEntity {
                     customer.setDistrictId(resultSet.getInt("district_id"));
                     customer.setPhotoName(resultSet.getString("photoname"));
                     customer.setPhotoUrl(resultSet.getString("photourl"));
+                    customer.setRegistrationDate(resultSet.getDate("registrationdate"));
                     customers.add(customer);
                 }
                 return customers;
@@ -93,7 +94,7 @@ public class CustomersEntity extends BaseEntity {
     }
 
     public List<Customer> findById(int visitorId) {
-        String query="SELECT re.trainer_id as trainer_id, tablaA1.district_id as district_id,  tablaA1.firstname as firstname,tablaA1.lastname as lastname  ,tablaA1.age as age, tablaA1.gender as gender, tablaA1.registrationdate as registrationdate , tablaA1.photoname as photoname,tablaA1.photourl as photourl FROM reservation as re INNER JOIN customer as tablaA1 on tablaA1.id = re.trainer_id INNER JOIN customer as tablaA2 on tablaA2.id = re.visitor_id WHERE re.state=Aceptado AND re.visitor_id=" + visitorId;
+        String query="SELECT re.trainer_id as trainer_id, tablaA1.district_id as district_id,  tablaA1.firstname as firstname,tablaA1.lastname as lastname  ,tablaA1.age as age, tablaA1.gender as gender, tablaA1.registrationdate as registrationdate , tablaA1.photoname as photoname,tablaA1.photourl as photourl FROM reservation as re INNER JOIN customer as tablaA1 on tablaA1.id = re.trainer_id INNER JOIN customer as tablaA2 on tablaA2.id = re.visitor_id WHERE  re.visitor_id=" + visitorId;
         return findByCriteriaCliente(query);
     }
 

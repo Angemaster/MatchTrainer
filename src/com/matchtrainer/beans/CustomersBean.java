@@ -36,7 +36,7 @@ public class CustomersBean implements Serializable{
     }
 
     public List<Customer> getTrainer(){
-        return service.findAllTrainerByClient(1);
+        return service.findAllTrainerByClient(4);
     }
 
 
@@ -161,7 +161,9 @@ public class CustomersBean implements Serializable{
         return "success";
     }
 
-
+    public String payCustomer(){
+        return "success";
+    }
 
 
 
