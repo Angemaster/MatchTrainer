@@ -18,7 +18,7 @@ public class ReservationsEntity extends BaseEntity{
                         .executeQuery(sql);
                 while (resultSet.next()) {
                     Reservation reservation = new Reservation();
-
+                    reservation.setId(resultSet.getInt("id"));
                     reservation.setTrainingPurpose(resultSet.getString("trainingpurpose"));
                     reservation.setState(resultSet.getString("state"));
                     reservation.setLastName(resultSet.getString("lastname"));
@@ -26,6 +26,8 @@ public class ReservationsEntity extends BaseEntity{
                     reservation.setCommentary(resultSet.getString("commentary"));
                     reservation.setHour(resultSet.getString("hour"));
                     reservation.setMeetingDate(resultSet.getDate("meetingdate"));
+                    reservation.setPhotoname(resultSet.getString("photoname"));
+                    reservation.setPhotourl(resultSet.getString("photourl"));
                     reservation.setAddress(resultSet.getString("address"));
                     reservation.setTrainingLevel(resultSet.getString("traininglevel"));
                     reservation.setTraininPlace(resultSet.getString("trainingplace"));
@@ -41,7 +43,7 @@ public class ReservationsEntity extends BaseEntity{
         return null;
     }
     public List<Reservation> findById(int id) {
-        String query="SELECT re.trainingpurpose as trainingpurpose, re.traininglevel as traininglevel, re.trainingplace as trainingplace, re.meetingdate as meetingdate, re.address as address, re.hour as hour, re.state as state, re.commentary as commentary,tablaA1.firstname as firstname,tablaA1.lastname as lastname FROM reservation as re INNER JOIN customer as tablaA1 on tablaA1.id = re.trainer_id INNER JOIN customer as tablaA2 on tablaA2.id = re.visitor_id WHERE re.visitor_id="+ id;
+        String query="SELECT re.id as id,re.trainingpurpose as trainingpurpose, re.traininglevel as traininglevel, re.trainingplace as trainingplace, re.meetingdate as meetingdate, re.address as address, re.hour as hour, re.state as state, re.commentary as commentary,tablaA1.firstname as firstname,tablaA1.lastname as lastname ,tablaA1.photoUrl as photoUrl,tablaA1.photoname as photoname FROM reservation as re INNER JOIN customer as tablaA1 on tablaA1.id = re.trainer_id INNER JOIN customer as tablaA2 on tablaA2.id = re.visitor_id WHERE re.visitor_id="+ id;
         return findByCriteria(query);
     }
     private List<Reservation> findByCriteriaTrainer(String sql) {
@@ -88,9 +90,8 @@ public class ReservationsEntity extends BaseEntity{
                 "UPDATE reservation SET state= '"+ state +"',commentary= '"+ reservation.getCommentary() +"' where id="+reservation.getId()) > 0;
     }
     public boolean updateState(Reservation reservation) {
-
-        return updateByCriteria(
-                "UPDATE reservation SET state = '" + reservation.getState()  + "' where = " + reservation.getId() ) > 0;
+        state="Aceptado";
+        return updateByCriteria("UPDATE reservation SET state='" + state  + "'where id= " + reservation.getId() ) > 0;
     }
 
     private int updateByCriteria(String sql) {

@@ -8,12 +8,12 @@
     <h:form styleClass="form-horizontal" role="form">
         <div class="rows">
 
-            <ui:repeat value="#{reservationsBean.client}" var="reservation">
+            <ui:repeat value="#{reservationsBean.reservations}" var="reservation">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="col-md-12">
                             <div class="col-sm-6 col-md-2">
-                                <h:graphicImage styleClass="img-thumbnail"   value="resources/image/Logo.png" />
+                                <h:graphicImage styleClass="img-thumbnail"   value="#{reservation.photourl}#{reservation.photoname}" />
                             </div>
                             <div class="col-md-5">
                                 <div class="form-group">

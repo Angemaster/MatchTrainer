@@ -80,7 +80,7 @@ public class ReservationsBean implements Serializable {
     }
     public String viewDenyReservation(){
 
-        return "Success";
+        return "success";
     }
 
     public String updateReservationState(){

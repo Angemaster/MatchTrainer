@@ -727,6 +727,21 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/solicitudes.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{reservationsBean.viewReservation(reservation)}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/verSolicitudes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
-
+    <navigation-rule>
+        <from-view-id>/verSolicitudes.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{reservationsBean.viewDenyReservation}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/rechazoSolicitud.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
