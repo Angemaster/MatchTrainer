@@ -12,11 +12,74 @@
                 template="templates/base.xhtml">
     <ui:define name="content-area">
 
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Aqui va ayuda
-                </div>
-            </div>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        </head>
+
+        <body>
+
+        <h3>Estamos para ayudarte </h3>
+
+        <br/>
+
+        <h4><strong>Email de contacto</strong> <br/></h4>
+        <h4>marketing@matchtrainer.com <br/></h4>
+
+        <h4><strong>Teléfono contacto</strong> <br/></h4>
+        <h4>+51 4129389 <br/></h4>
+
+        <h4><strong>WhatsApp</strong> <br/></h4>
+        <h4>913 045 169 <br/></h4>
+
+        <br/><br/>
+
+
+        <form action="/php/insertar_datos.php" method="post" enctype="multipart/form-data">
+            Nombre <br/>
+            <input type="text" name="nombre" value="" size="20" maxlength="30" />
+
+            <br/>
+
+            Apellidos <br/>
+            <input type="text" name="apellidos" value="" size="50" maxlength="80" />
+
+            <br/>
+
+            DNI <br/>
+            <input type="text" name="dni" value="" size="10" maxlength="9" />
+
+            <br/>
+            
+
+            Telefono <br/>
+            <input type="text" name="telefono" value="" size="10" maxlength="9" />
+
+            <br/>
+
+            Sexo <br/>
+            <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre <br/>
+            <input type="radio" name="sexo" value="mujer" /> Mujer
+
+            <br/><br/>
+
+            Mensaje<br/>
+            <textarea rows="4" cols="50">
+        </textarea>
+            <br/><br/>
+
+
+            <input name="suscribir" type="checkbox" value="suscribir" checked="checked"/> Suscribirme al boletín de novedades
+
+            <br/><br/>
+
+            <input type="submit" name="enviar" value="Enviar" />
+            <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+
+
+        </form>
+
+        </body>
 
     </ui:define>
 </ui:composition>
