@@ -90,6 +90,295 @@ hr {
     background-color: #e6e6e6;
     border-color: #adadad;
 }
+.logos {
+    font-size: 0;
+    width: 100%;
+}
+
+.logos > div {
+    box-sizing: border-box;
+    display: inline-block !important;
+    width: 50%;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.logos img {
+    width: 90%;
+}
+
+.promo {
+    font-size: 0;
+}
+
+.promo > div {
+    box-sizing: border-box;
+    padding: 25px;
+    display: inline-block;
+    width: 50%;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.promo > div:first-child {
+    border-right: 1px solid red;
+}
+
+.promo p {
+    font-size: 22px;
+}
+
+.bordered-box {
+    position: relative;
+    color: #606060;
+    border: 1px solid #ec1b2e;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 15px 15px 15px 45px;
+}
+
+.bordered-box img {
+    background-color: #ffffff;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -35px;
+    margin: auto;
+}
+
+.fechas {
+    font-size: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.fechas > div {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+}
+
+.fechas > div:first-child {
+    width: 30%;
+}
+
+.bot-wrap {
+    font-size: 0;
+    width: 80%;
+    margin: auto;
+}
+
+.bot-wrap > div {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.bot-wrap > div:first-child {
+    text-align: right;
+    width: 40%;
+}
+
+/*-- FOOTER --*/
+
+.legal {
+    clear: both;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.legal img {
+    float: left;
+    margin: 15px 20px 100px 0;
+    height: 100px;
+}
+
+.legal p {
+    color: #333333;
+    font-size: 12px;
+    text-align: justify;
+    font-family: GeoN, Arial;
+}
+
+.legal p:nth-child(1),
+.legal p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.legal p > span {
+    font-weight: bold;
+    font-family: GeoB, Arial;
+}
+
+/*
+    ========
+    COLORES
+    ========
+*/
+
+.palette-golden {
+    color: #ba9700;
+}
+
+.palette-fuchsia {
+    color: #c40260;
+}
+
+.palette-olive {
+    color: #676900;
+}
+
+.palette-turquoise {
+    color: #1d97c3;
+}
+
+.palette-orange {
+    color: #f26400;
+}
+
+.palette-maroon {
+    color: #7d0d00;
+}
+
+.palette-purple {
+    color: #6d4699;
+}
+
+.palette-yellow {
+    color: #ffb300;
+}
+
+.palette-gray {
+    color: #606060;
+}
+
+.palette-red {
+    color: #ec1b2e;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.big-text {
+    font-size: 25px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .wrapper__header {
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+    .wrapper__content {
+        width: 90%;
+        margin: auto;
+        padding-top: 0;
+    }
+
+    .wrapper h1 {
+        font-size: 30px;
+    }
+
+    .promo > div {
+        box-sizing: border-box;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        border: 0 !important;
+    }
+
+    .promo img {
+        width: 100%;
+    }
+
+    img[alt="Club El Comercio"],
+    img[alt="Paquetes"],
+    img[alt="El Comercio"] {
+        width: 100%;
+    }
+
+    .bordered-box {
+        width: 85%;
+        padding: 15px 15px 35px;
+    }
+
+    .bordered-box img {
+        height: 40px;
+        background-color: #ffffff;
+        padding: 8px;
+        position: absolute;
+        top: -30px;
+        margin: auto;
+    }
+
+    .fechas {
+        width: 95%;
+    }
+
+    .fechas > div {
+        box-sizing: border-box;
+        font-size: 17px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 80%;
+    }
+
+    .fechas > div:first-child {
+        width: 20%;
+    }
+
+    .fechas > div:first-child img {
+        width: 100%;
+    }
+
+    .fechas > div:last-child {
+        padding: 0 0 0 10px;
+    }
+
+    .bot-wrap {
+        width: 100%;
+    }
+
+    .bot-wrap > div {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+
+    .bot-wrap img {
+        width: 100%;
+    }
+
+    .bot-wrap > div:first-child {
+        text-align: center;
+        width: 100%;
+    }
+}
 /* Footer */
 .col-footer {
     padding: 30px 0;
