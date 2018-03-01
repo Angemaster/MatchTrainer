@@ -312,16 +312,7 @@ hr {
         border: 0 !important;
     }
 
-    .promo img {
-        width: 100%;
-    }
-
-    img[alt="Club El Comercio"],
-    img[alt="Paquetes"],
-    img[alt="El Comercio"] {
-        width: 100%;
-    }
-
+    
     .bordered-box {
         width: 85%;
         padding: 15px 15px 35px;
